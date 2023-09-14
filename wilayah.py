@@ -1,8 +1,10 @@
 import pandas as pd
 import streamlit as st
+import plotly
+import plotly_express
 import plotly.graph_objects as go
 import json
-import re
+
 
 st.set_page_config(page_title="Sebaran KirimanJakarta", layout='wide')
 
