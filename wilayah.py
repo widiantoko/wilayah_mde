@@ -36,7 +36,8 @@ df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
 df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
 
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
-
+df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
+df3["no_status"]=round(df3["empty"] / df3["konid"] * 100,2)
 
 n=df3["konid"].sum()
 na=jkt['kec'].isna().sum()
@@ -55,9 +56,9 @@ with col1:
       geojson=geojson,
       locations=df3["distrik"], 
       customdata=df3["distrik"],
-      text=df3.apply(lambda row: f"""Sukses: {row['Y']}
-                     <br>Reject: {row['C']}
-                     <br>No Status: {row['empty']}""", axis=1),
+      text=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
+                     <br>Reject: {row['C']} ({row['failed']}%)
+                     <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
       featureidkey="properties.WADMKC",
       z=df3["konid"], 
       colorbar_title="<b>Kiriman UOB",
@@ -78,7 +79,7 @@ with col1:
       st.plotly_chart(fig8, use_container_width=True)
 
 
-st.dataframe(df3)
+#st.dataframe(df3)
 
 #st.text(n)
 #with col2:
