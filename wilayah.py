@@ -6,7 +6,7 @@ import plotly.graph_objects as go
 import json
 
 
-st.set_page_config(page_title="Sebaran KirimanJakarta", layout='wide')
+st.set_page_config(page_title="Sebaran Kiriman Jakarta", layout='wide')
 
 col1, col2 = st.columns([5,1] ,gap="small")
 
