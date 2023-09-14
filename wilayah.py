@@ -35,6 +35,7 @@ df2 = jkt.groupby(['kec'], as_index=False)['konid'].count()
 df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
 df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
 
+df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
 
 
 n=df3["konid"].sum()
@@ -45,7 +46,6 @@ all=jkt['konid'].count()
 
 text=df3.apply(lambda row: f"{row['Y']}%<br>{row['C']}", axis=1),
 hoverinfo="text"
-
 
 
 with col1:
@@ -78,7 +78,7 @@ with col1:
       st.plotly_chart(fig8, use_container_width=True)
 
 
-#st.dataframe(df3)
+st.dataframe(df3)
 
 #st.text(n)
 #with col2:
