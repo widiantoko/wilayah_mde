@@ -63,7 +63,7 @@ with col1:
       autocolorscale=False,
       name="",
       hoverlabel=dict(bgcolor="white",font_size=14),
-      hovertemplate="<b>%{customdata} : %{z} Kiriman<b>" + "<br>%{text} <br>"
+      hovertemplate="<b>%{customdata} : %{z} Kiriman</b>" + "<br>%{text} <br>"
           
         
     )#type: ignore
