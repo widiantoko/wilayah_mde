@@ -56,9 +56,9 @@ with col1:
       geojson=geojson,
       locations=df3["distrik"], 
       customdata=df3["distrik"],
-      text=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
-                     <br>Reject: {row['C']} ({row['failed']}%)
-                     <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
+      text=df3.apply(lambda row: f"""Sukses: {row['Y']} 
+                     <br>Reject: {row['C']} 
+                     <br>No Status: {row['empty']}  """, axis=1),
       featureidkey="properties.WADMKC",
       z=df3["konid"], 
       colorbar_title="<b>Kiriman UOB",
