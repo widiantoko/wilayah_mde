@@ -56,7 +56,7 @@ with col1:
       geojson=geojson,
       locations=df3["distrik"], 
       customdata=df3["distrik"],
-      text=df3.apply(lambda row: f"""Sukses: {row['Y']} 
+      text=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
                      <br>Reject: {row['C']} 
                      <br>No Status: {row['empty']}  """, axis=1),
       featureidkey="properties.WADMKC",
