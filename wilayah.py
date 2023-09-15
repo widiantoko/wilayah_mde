@@ -108,7 +108,7 @@ with col1:
       color_continuous_scale="Viridis",
                            range_color=(0, 12),
                            mapbox_style="carto-positron",
-                           zoom=3, center = {"lat": 37.0902, "lon": -95.7129},
+                           zoom=3, center = {"lat": 6.200000, "lon": 106.816666},
                            opacity=0.5,
                            labels={'unemp':'unemployment rate'}
 
