@@ -94,7 +94,7 @@ with col1:
       
 
       fig9 = go.Figure(
-      data=go.Choropleth(
+      data=go.Choroplethmapbox(
       geojson=new,
       locations=df3["distrik"], 
       customdata=df3["distrik"],
