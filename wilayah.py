@@ -88,13 +88,13 @@ with col1:
      #st.text(n)
      #st.text(na)
      
-      with open('data/style.json') as f:
-        new = json.load(f)
+      with open('data/style.json') as h:
+        new = json.load(h)
 
       
 
       fig9 = go.Figure(
-    data=go.Choropleth(
+      data=go.Choropleth(
       geojson=new,
       locations=df3["distrik"], 
       customdata=df3["distrik"],
