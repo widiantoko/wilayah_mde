@@ -103,7 +103,7 @@ with col1:
 
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
                                   locations=df3["distrik"], 
-                     featureidkey="properties.WADMKC",color=df3["konid"], 
+                     featureidkey="properties.WADMKC",color=df3["konid"], title="Sebaran Kiriman UOB di DKI Jakarta ",
    
       color_continuous_scale="Viridis_r",
                            range_color=(0, 2000),
