@@ -89,9 +89,7 @@ with col1:
      #st.text(na)
      
 
-      token = open("pk.eyJ1Ijoid2lkaWFudG9rbyIsImEiOiJjbG1rM254a3EwOXRyMmlvb3QwZzJqZmJnIn0.pOxdoUDqgaSkFE5r52IZNw").read() # you will need your own token
-  
- # pk.eyJ1Ijoid2lkaWFudG9rbyIsImEiOiJjbG1rM254a3EwOXRyMmlvb3QwZzJqZmJnIn0.pOxdoUDqgaSkFE5r52IZNw
+      
 
       fig9 = go.Figure(
     data=go.Choropleth(
