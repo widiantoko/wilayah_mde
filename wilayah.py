@@ -103,10 +103,12 @@ with col1:
 
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
                                   locations=df3["distrik"], 
-                     featureidkey="properties.WADMKC",color=df3["konid"], title="Sebaran Kiriman UOB di DKI Jakarta",
+                     featureidkey="properties.WADMKC",color=df3["konid"],
                      custom_data=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
                      <br>Reject: {row['C']} ({row['failed']}%)
                      <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
+                     hover_data=df3["sukses"],
+  
 
    
       color_continuous_scale="Viridis_r",
@@ -114,7 +116,8 @@ with col1:
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.5, height=700,
-                           labels={'sukses':'failed'}
+                           
+                           
 
                   
                      )#type: ignore 
