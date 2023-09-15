@@ -114,7 +114,7 @@ with col1:
     )#type: ignore
 )
       fig9.update_layout( mapbox_style="light",
-                  mapbox_zoom=3, mapbox_center = {"lat": 37.0902, "lon": -95.7129},width=700,height=750,  margin=dict(l=1, r=1, t=1, b=1), title= f"""<br>Sebaran Data Dokumen UOB di Kecamatan DKI Jakarta 
+                  mapbox_zoom=3,width=700,height=750,  margin=dict(l=1, r=1, t=1, b=1), title= f"""<br>Sebaran Data Dokumen UOB di Kecamatan DKI Jakarta 
                    <br>(n : {n} dari {all} Dokumen) """, autosize=True, 
                  title_y=0.9, title_font_size=22, title_yanchor="top", title_xanchor='left' ,margin_t=50, showlegend=True)
       fig9.update_geos(fitbounds="locations", visible=False) #type: ignore
