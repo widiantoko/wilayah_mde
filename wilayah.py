@@ -107,7 +107,7 @@ with col1:
                      custom_data=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
                      <br>Reject: {row['C']} ({row['failed']}%)
                      <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
-                     hover_data=df3["sukses"],
+                     hover_data=df3["sukses"], title="Kiriman UOB",
   
 
    
@@ -127,6 +127,23 @@ with col1:
     
 
       st.plotly_chart(fig9, use_container_width=True)
+
+
+      fig7 = go.Figure(go.Choroplethmapbox(geojson=geojson, 
+                                    locations=df3["distrik"], z=df3['konid'],
+                                    colorscale="Viridis", marker_line_width=.5))
+
+      fig7.update_layout(mapbox_style="open-street-map",
+                        height = 1000,
+                        autosize=True,
+                        margin={"r":0,"t":0,"l":0,"b":0},
+                        paper_bgcolor='#303030',
+                        plot_bgcolor='#303030',
+                        mapbox=dict(center=dict(lat=-6.202905, lon=106.778419),zoom=9),
+                        )
+
+
+      st.plotly_chart(fig7, use_container_width=True)
       
 
 
