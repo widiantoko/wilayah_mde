@@ -122,7 +122,7 @@ with col1:
       st.plotly_chart(fig9, use_container_width=True)
 
 
-      fig7 = go.Figure(data=go.Choroplethmapbox(geojson=geojson, 
+      fig7 = go.Figure(go.Choroplethmapbox(geojson=geojson, 
                                     locations=df3["distrik"], z=df3['konid'],
                                     colorscale="Viridis", marker_line_width=.5))
 
