@@ -92,7 +92,7 @@ with col1:
         new = json.load(h)
 
 
-      token = open(".mapbox_token").read()
+      #token = open(".mapbox_token").read()
 
 
       #token=pk.eyJ1Ijoid2lkaWFudG9rbyIsImEiOiJjbG1rM254a3EwOXRyMmlvb3QwZzJqZmJnIn0.pOxdoUDqgaSkFE5r52IZNw
@@ -119,7 +119,7 @@ with col1:
 )
       fig9.update_layout( mapbox_style="light",
                   mapbox_zoom=3,width=700,height=750,  margin=dict(l=1, r=1, t=1, b=1), title= f"""<br>Sebaran Data Dokumen UOB di Kecamatan DKI Jakarta 
-                   <br>(n : {n} dari {all} Dokumen) """, autosize=True, mapbox_accesstoken=token,
+                   <br>(n : {n} dari {all} Dokumen) """, autosize=True, 
                  title_y=0.9, title_font_size=22, title_yanchor="top", title_xanchor='left' ,margin_t=50, showlegend=True)
       fig9.update_geos(fitbounds="locations", visible=False) #type: ignore
 
