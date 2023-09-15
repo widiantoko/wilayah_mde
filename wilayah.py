@@ -108,9 +108,9 @@ with col1:
       color_continuous_scale="Viridis_r",
                            range_color=(0, 2000),
                            mapbox_style="carto-positron",
-                           zoom=3, center = {"lat": 6.200000, "lon": 106.816666},
+                           zoom=5, center = {"lat": 6.200000, "lon": 106.816666},
                            opacity=0.5,
-                           labels={'unemp':'unemployment rate'}
+                           labels={'sukses':'failed'}
 
                   
                      )#type: ignore 
