@@ -104,8 +104,15 @@ with col1:
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
                                   locations=df3["distrik"], 
                      featureidkey="properties.WADMKC",color=df3["konid"], 
-      mapbox_style="carto-positron", 
-                  mapbox_zoom=3,width=700,height=750,
+   
+      color_continuous_scale="Viridis",
+                           range_color=(0, 12),
+                           mapbox_style="carto-positron",
+                           zoom=3, center = {"lat": 37.0902, "lon": -95.7129},
+                           opacity=0.5,
+                           labels={'unemp':'unemployment rate'}
+
+                  
                      )#type: ignore 
 
       fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
