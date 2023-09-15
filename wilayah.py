@@ -95,11 +95,13 @@ with col1:
       #token = open(".mapbox_token").read()
 
 
+
+
       #token=pk.eyJ1Ijoid2lkaWFudG9rbyIsImEiOiJjbG1rM254a3EwOXRyMmlvb3QwZzJqZmJnIn0.pOxdoUDqgaSkFE5r52IZNw
 
       fig9 = go.Figure(
       data=go.Choroplethmapbox(
-      geojson=new,
+      geojson=geojson,
       locations=df3["distrik"], 
       customdata=df3["distrik"],
       text=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
