@@ -120,7 +120,6 @@ with col1:
     
 
       st.plotly_chart(fig9, use_container_width=True)
-      st.dataframe(df3)
-
+      
 
 
