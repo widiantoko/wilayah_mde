@@ -126,8 +126,8 @@ with col1:
                                     locations=df3["distrik"], z=df3['konid'],
                                     colorscale="Viridis", marker_line_width=.5))
 
-      fig7.update_layout(mapbox_style="open-street-map",
-                        height = 1000,
+      fig7.update_layout(mapbox_style="carto-positron",
+                        height = 800,
                         autosize=True,
                         margin={"r":0,"t":0,"l":0,"b":0},
                         paper_bgcolor='#303030',
