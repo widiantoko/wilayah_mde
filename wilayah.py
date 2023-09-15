@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import plotly
-import plotly_express
+import plotly_express as px
 import plotly.graph_objects as go
 import json
 
@@ -98,9 +98,10 @@ with col1:
 
       #token=pk.eyJ1Ijoid2lkaWFudG9rbyIsImEiOiJjbG1rM254a3EwOXRyMmlvb3QwZzJqZmJnIn0.pOxdoUDqgaSkFE5r52IZNw
 
-      fig9 = go.Figure(
-      data=go.Choroplethmapbox(
-      geojson=geojson,
+      
+      
+
+      fig9 = px.choropleth_mapbox(df3, geojson=geojson,
       locations=df3["distrik"], 
       customdata=df3["distrik"],
       text=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
@@ -109,20 +110,18 @@ with col1:
       featureidkey="properties.WADMKC",
       z=df3["konid"], 
       colorbar_title="<b>Kiriman UOB",
-      colorscale='Greens',
-      autocolorscale=False,
       name="",
+      mapbox_style="carto-positron", mapbox_center = {"lat": -6.234497, "lon": 106.805833},
+                  mapbox_zoom=3,width=700,height=750,
       hoverlabel=dict(bgcolor="white",font_size=14),
       hovertemplate="<b>%{customdata} : %{z} Kiriman</b>" + "<br>%{text} <br>"
-          
-        
-    )#type: ignore 
-)
-      fig9.update_layout( mapbox_style="carto-positron", mapbox_center = {"lat": -6.234497, "lon": 106.805833},
-                  mapbox_zoom=3,width=700,height=750,  margin=dict(l=1, r=1, t=1, b=1), title= f"""<br>Sebaran Data Dokumen UOB di Kecamatan DKI Jakarta 
+                     )#type: ignore 
+
+      fig9.update_layout(  margin=dict(l=1, r=1, t=1, b=1), title= f"""<br>Sebaran Data Dokumen UOB di Kecamatan DKI Jakarta 
                    <br>(n : {n} dari {all} Dokumen) """, autosize=True, 
                  title_y=0.9, title_font_size=22, title_yanchor="top", title_xanchor='left' ,margin_t=50, showlegend=True)
-      fig9.update_geos(fitbounds="locations", visible=False) #type: ignore
+      
+    
 
       st.plotly_chart(fig9, use_container_width=True)
 
