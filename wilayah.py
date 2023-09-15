@@ -88,8 +88,7 @@ with col1:
      #st.text(n)
      #st.text(na)
      
-      with open('data/style.json') as h:
-        new = json.load(h)
+      
 
 
       #token = open(".mapbox_token").read()
