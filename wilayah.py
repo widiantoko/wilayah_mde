@@ -108,7 +108,7 @@ with col1:
       color_continuous_scale="Viridis_r",
                            range_color=(0, 2000),
                            mapbox_style="carto-positron",
-                           zoom=10, center = {"lat": -8.650000, "lon": 115.216667},
+                           zoom=10, center = {"lat": -6.914744, "lon": 107.609810},
                            opacity=0.5,
                            labels={'sukses':'failed'}
 
