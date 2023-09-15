@@ -123,7 +123,7 @@ with col1:
 
 
       fig7 = go.Figure(go.Choroplethmapbox(geojson=geojson, 
-                                    locations=df3["distrik"], z=df3['konid'],
+                                    locations=df3["distrik"], z=df3['konid'], marker_opacity=0.5,
                                     colorscale="Viridis", marker_line_width=.5))
 
       fig7.update_layout(mapbox_style="carto-positron",
