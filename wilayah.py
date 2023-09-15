@@ -101,15 +101,13 @@ with col1:
       
       
 
-      fig9 = px.choropleth_mapbox(df3, geojson=geojson,
-      locations=df3["distrik"], 
+      fig9 = px.choropleth_mapbox(df3, geojson=geojson,locations=df3["distrik"], 
       customdata=df3["distrik"],
       text=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
                      <br>Reject: {row['C']} ({row['failed']}%)
                      <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
       featureidkey="properties.WADMKC",
-      z=df3["konid"], 
-      colorbar_title="<b>Kiriman UOB",
+      color=df3["konid"], 
       name="",
       mapbox_style="carto-positron", mapbox_center = {"lat": -6.234497, "lon": 106.805833},
                   mapbox_zoom=3,width=700,height=750,
