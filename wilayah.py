@@ -128,7 +128,7 @@ with col1:
 
       fig7.update_layout(mapbox_style="carto-positron",
               
-                        height = 800,
+                        height = 600,
                         autosize=True,
                         margin={"r":0,"t":0,"l":0,"b":0},
                         mapbox=dict(center=dict(lat=-6.202905, lon=106.778419),zoom=9),
