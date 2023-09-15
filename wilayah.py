@@ -107,10 +107,6 @@ with col1:
                      custom_data=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
                      <br>Reject: {row['C']} ({row['failed']}%)
                      <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
-                     hover_data=df3["sukses"], title="Kiriman UOB",
-  
-
-   
       color_continuous_scale="Viridis_r",
                            range_color=(0, 2000),
                            mapbox_style="carto-positron",
