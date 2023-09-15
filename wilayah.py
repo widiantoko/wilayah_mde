@@ -105,7 +105,7 @@ with col1:
                                   locations=df3["distrik"], 
                      featureidkey="properties.WADMKC",color=df3["konid"], 
    
-      color_continuous_scale="Viridis",
+      color_continuous_scale="Viridis_r",
                            range_color=(0, 2000),
                            mapbox_style="carto-positron",
                            zoom=3, center = {"lat": 6.200000, "lon": 106.816666},
