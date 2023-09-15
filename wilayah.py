@@ -88,7 +88,7 @@ with col1:
      #st.text(n)
      #st.text(na)
      
-      with open('data/style.son') as f:
+      with open('data/style.json') as f:
         new = json.load(f)
 
       
