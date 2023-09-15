@@ -122,7 +122,7 @@ with col1:
       st.plotly_chart(fig9, use_container_width=True)
 
 
-      fig7 = go.Figure(go.Choroplethmapbox(geojson=geojson, 
+      fig7 = go.Figure(data=go.Choroplethmapbox(geojson=geojson, 
                                     locations=df3["distrik"], z=df3['konid'],
                                     colorscale="Viridis", marker_line_width=.5))
 
@@ -130,8 +130,6 @@ with col1:
                         height = 800,
                         autosize=True,
                         margin={"r":0,"t":0,"l":0,"b":0},
-                        paper_bgcolor='#303030',
-                        plot_bgcolor='#303030',
                         mapbox=dict(center=dict(lat=-6.202905, lon=106.778419),zoom=9),
                         )
 
