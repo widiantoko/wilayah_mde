@@ -115,9 +115,9 @@ with col1:
       hovertemplate="<b>%{customdata} : %{z} Kiriman</b>" + "<br>%{text} <br>"
           
         
-    )#type: ignore
+    )#type: ignore 
 )
-      fig9.update_layout( mapbox_style="carto-positron",
+      fig9.update_layout( mapbox_style="carto-positron", mapbox_center = {"lat": -6.234497, "lon": 106.805833},
                   mapbox_zoom=3,width=700,height=750,  margin=dict(l=1, r=1, t=1, b=1), title= f"""<br>Sebaran Data Dokumen UOB di Kecamatan DKI Jakarta 
                    <br>(n : {n} dari {all} Dokumen) """, autosize=True, 
                  title_y=0.9, title_font_size=22, title_yanchor="top", title_xanchor='left' ,margin_t=50, showlegend=True)
