@@ -108,11 +108,13 @@ with col1:
                            range_color=(0, 2000),
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
-                           opacity=0.5, height=700
+                           opacity=0.5, height=700,
+                           text=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
+                     <br>Reject: {row['C']} ({row['failed']}%)
+                     <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
+                     hoverinfo="text"
                            
-                           
-
-                  
+                          
                      )#type: ignore 
       #fig9.update_traces(hovertemplate="<b>{custom_data}  Kiriman</b>")
       
