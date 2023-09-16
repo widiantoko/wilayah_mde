@@ -38,6 +38,7 @@ df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
 df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
 df3["no_status"]=round(df3["empty"] / df3["konid"] * 100,2)
+df3["judul"]=df3["distrik"]+ " : " + df3["konid"] + "Dokumen"
 
 n=df3["konid"].sum()
 na=jkt['kec'].isna().sum()
@@ -109,7 +110,7 @@ with col1:
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.5, height=700,
-                           hover_name="sukses",
+                           hover_name="judul",
                            hover_data = {'konid':False, 'distrik':False}
                      
                     
