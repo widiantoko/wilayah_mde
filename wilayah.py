@@ -108,7 +108,7 @@ with col1:
                            range_color=(0, 2000),
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
-                           opacity=0.5, height=700, hover_data=['sukses']
+                           opacity=0.5, height=700
                            
                            
 
