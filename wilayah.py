@@ -82,27 +82,8 @@ with col1:
       fig8.update_geos(fitbounds="locations", visible=False) #type: ignore
    
 
-      st.plotly_chart(fig8, use_container_width=True)
+      #st.plotly_chart(fig8, use_container_width=True)
 
-
-#st.dataframe(df3)
-
-#st.text(n)
-#with col2:
-     
-     #st.text(all)
-     #st.text(n)
-     #st.text(na)
-     
-      
-
-
-      #token = open(".mapbox_token").read()
-
-
-
-
-      #token=pk.eyJ1Ijoid2lkaWFudG9rbyIsImEiOiJjbG1rM254a3EwOXRyMmlvb3QwZzJqZmJnIn0.pOxdoUDqgaSkFE5r52IZNw
 
       
       
