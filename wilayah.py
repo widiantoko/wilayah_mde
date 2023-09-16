@@ -109,7 +109,7 @@ with col1:
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.5, height=700,
-                           hover_name="distrik",
+                           hover_name="sukses",
                            hover_data = {'konid':False, 'distrik':False}
                      
                     
