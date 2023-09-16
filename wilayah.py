@@ -126,8 +126,7 @@ with col1:
       fig9.update_layout(
     hoverlabel=dict(
         bgcolor="white",
-        font_size=16,
-        font_family="Rockwell"
+        font_size=12
     )
 )
       
