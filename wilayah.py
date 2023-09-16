@@ -102,17 +102,17 @@ with col1:
       
 
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
-                                  locations=df3["distrik"], custom_data=["empty"],
+                                  locations=df3["distrik"],
                      featureidkey="properties.WADMKC",color=df3["konid"],
       color_continuous_scale="Viridis_r",
                            range_color=(0, 2000),
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.5, height=700,
-                           text=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
+                           custom_data=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
                      <br>Reject: {row['C']} ({row['failed']}%)
                      <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
-                     hoverinfo="text"
+                     hoverinfo="custom_data"
                            
                           
                      )#type: ignore 
