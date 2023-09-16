@@ -116,7 +116,7 @@ with col1:
                      )#type: ignore 
 
       fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-      fig9.update_traces(hovertemplate="<b>%{custom_data[0]} : %{custom_data[1]} Kiriman</b>")
+      fig9.update_traces(hovertemplate="<b>%{custom_data}  Kiriman</b>")
       
     
 
