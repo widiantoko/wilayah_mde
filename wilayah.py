@@ -111,8 +111,8 @@ with col1:
                            opacity=0.5, height=700,
                            custom_data=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
                      <br>Reject: {row['C']} ({row['failed']}%)
-                     <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
-                     hoverinfo="custom_data"
+                     <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1)
+                    
                            
                           
                      )#type: ignore 
