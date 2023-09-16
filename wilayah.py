@@ -102,7 +102,7 @@ with col1:
       
 
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
-                                  locations=df3["distrik"], custom_data=df3["empty"],
+                                  locations=df3["distrik"], custom_data=(["empty"],["failed"]),
                      featureidkey="properties.WADMKC",color=df3["konid"],
       color_continuous_scale="Viridis_r",
                            range_color=(0, 2000),
@@ -116,7 +116,7 @@ with col1:
                      )#type: ignore 
 
       fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-      fig9.update_traces(hovertemplate="<b>%{customdata} : %{z} Kiriman</b>" + "<br>%{text} <br>")
+      fig9.update_traces(hovertemplate="<b>%{custom_data[0]} : %{custom_data[1]} Kiriman</b>")
       
     
 
