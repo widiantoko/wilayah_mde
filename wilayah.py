@@ -38,7 +38,7 @@ df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
 df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
 df3["no_status"]=round(df3["empty"] / df3["konid"] * 100,2)
-df3["judul"]=df3["distrik"]+ " : " + df3["konid"] + "Dokumen"
+df3["judul"]=df3["distrik"].astype(str)+ " : " + df3["konid"] + "Dokumen"
 
 n=df3["konid"].sum()
 na=jkt['kec'].isna().sum()
