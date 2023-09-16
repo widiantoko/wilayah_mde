@@ -80,7 +80,7 @@ with col1:
                    <br>(n : {n} dari {all} Dokumen) """, autosize=True, 
                  title_y=0.9, title_font_size=22, title_yanchor="top", title_xanchor='left' ,margin_t=50, showlegend=True)
       fig8.update_geos(fitbounds="locations", visible=False) #type: ignore
-      fig8.update_traces(hovertemplate=None)
+   
 
       st.plotly_chart(fig8, use_container_width=True)
 
