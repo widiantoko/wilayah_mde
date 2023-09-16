@@ -138,8 +138,8 @@ with col1:
                         )
 
 
-      st.plotly_chart(fig7, use_container_width=True)
-      st.dataframe(df3)
+      #st.plotly_chart(fig7, use_container_width=True)
+      #st.dataframe(df3)
       
 
 
