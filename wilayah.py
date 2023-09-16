@@ -102,7 +102,7 @@ with col1:
       
 
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
-                                  locations=df3["distrik"], custom_data=["empty"],
+                                  locations=df3["distrik"], custom_data=df["empty"],
                      featureidkey="properties.WADMKC",color=df3["konid"],
       color_continuous_scale="Viridis_r",
                            range_color=(0, 2000),
