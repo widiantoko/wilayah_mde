@@ -110,7 +110,7 @@ with col1:
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.5, height=700,
                            hover_name="distrik",
-                           hover_data = {'distrik':False}
+                           hover_data = {'konid':False, 'distrik':False}
                      
                     
                            
