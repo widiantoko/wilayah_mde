@@ -117,14 +117,19 @@ with col1:
                            opacity=0.5, height=700,
                            hover_name="judul",
                            hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
-                     
-                    
-                           
+                                    
                           
                      )#type: ignore 
       #fig9.update_traces(hovertemplate="<b> {custom_data} Kiriman</b>")
       
       fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+      fig9.update_layout(
+    hoverlabel=dict(
+        bgcolor="white",
+        font_size=16,
+        font_family="Rockwell"
+    )
+)
       
     
 
