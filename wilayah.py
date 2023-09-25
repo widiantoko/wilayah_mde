@@ -150,21 +150,6 @@ with col1:
       st.plotly_chart(fig9, use_container_width=True)
 
 
-      fig7 = go.Figure(go.Choroplethmapbox(geojson=geojson, 
-                                    locations=df3.distrik, z=df3.konid, marker_opacity=0.5,
-                                    colorscale="Viridis", marker_line_width=.5))
-
-      fig7.update_layout(mapbox_style="carto-positron",
-              
-                        height = 600,
-                        autosize=True,
-                        margin={"r":0,"t":0,"l":0,"b":0}, mapbox_center = {"lat":-6.202905, "lon": 106.778419},
-                        mapbox_zoom=8,
-                        )
-
-
-      #st.plotly_chart(fig7, use_container_width=True)
-      #st.dataframe(df3)
       
 
 
