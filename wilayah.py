@@ -78,7 +78,7 @@ for kec in df_batam['kec'].to_list():
 p_batam = pd.pivot_table(batam, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
 
-
+st.table(p_batam)
 
 
 
