@@ -78,8 +78,20 @@ for kec in df_batam['kec'].to_list():
 p_batam = pd.pivot_table(batam, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
 
-st.table(p_batam)
+#st.table(p_batam)
 
+
+df2_batam = batam.groupby(['kec'], as_index=False)['konid'].count()
+df2a_batam= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
+df3_batam = pd.merge(pd.merge(df_batam, df2_batam, on='kec', how='left'), p_batam, on='kec', how='left').reset_index(drop=True)
+
+df3_batam["sukses"]=round(df3_batam["Y"] / df3_batam["konid"] * 100,2)
+df3_batam["failed"]=round(df3_batam["C"] / df3_batam["konid"] * 100,2)
+df3_batam["no_status"]=round(df3_batam["empty"] / df3_batam["konid"] * 100,2)
+df3_batam["judul"]=df3_batam["distrik"].astype(str)+ " : " + df3_batam["konid"].astype(str) + " Dokumen"
+df3_batam["Sukses"]= df3_batam["Y"].astype(str)+ " ("+ df3_batam["sukses"].astype(str)+" %)"
+df3_batam["Gagal"]= df3_batam["C"].astype(str)+ " ("+ df3_batam["failed"].astype(str)+" %)"
+df3_batam["No Status"]= df3_batam["empty"].astype(str)+ " ("+ df3_batam["no_status"].astype(str)+" %)"
 
 
 
@@ -151,5 +163,33 @@ with col1:
 
 
       
+      figbatam = px.choropleth_mapbox(df3_batam, geojson=geojson01,
+                                  locations=df3_batam["distrik"],
+                     featureidkey="properties.WADMKC",color=df3_batam["konid"],
+      color_continuous_scale="Viridis_r",
+                           range_color=(0, 3000),
+                           mapbox_style="carto-positron",
+                           zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
+                           opacity=0.5, height=700,
+                           hover_name="judul",
+                           hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
+                                    
+                          
+                     )#type: ignore 
+      #fig9.update_traces(hovertemplate="<b> {custom_data} Kiriman</b>")
+      
+      fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+      fig9.update_layout(
+    hoverlabel=dict(
+        bgcolor="white",
+        font_size=12
+    )
+)
+      
+    
+
+      st.plotly_chart(fig9, use_container_width=True)
+
+
 
 
