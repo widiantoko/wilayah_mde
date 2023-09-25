@@ -48,9 +48,44 @@ na=jkt['kec'].isna().sum()
 all=jkt['konid'].count()
 
 
-
 text=df3.apply(lambda row: f"{row['Y']}%<br>{row['C']}", axis=1),
 hoverinfo="text"
+
+
+
+
+
+##----batam-----##
+
+batam=pd.read_excel('data/batam_UOB_sept.xlsx')
+batam["join"]=batam["alam5"].astype(str) +" " + batam["alam6"].astype(str)
+batam['pod'].fillna("empty",inplace=True)
+
+
+with open('data/batam_kec.geojson') as h:
+      geojson01 = json.load(h)
+
+
+
+df_batam = pd.DataFrame(
+    {"distrik": pd.json_normalize(geojson01["features"])["properties.WADMKC"]}
+).assign(kec=lambda d: d["distrik"].str.upper())
+
+
+for kec in df_batam['kec'].to_list():
+  batam.loc[ batam['join'].str.contains(kec), 'kec'] = kec
+
+p_batam = pd.pivot_table(batam, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+
+
+
+
+
+
+
+
+
+
 
 
 with col1:
