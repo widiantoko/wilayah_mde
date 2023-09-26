@@ -169,7 +169,7 @@ with col1:
       color_continuous_scale="Viridis_r",
                            range_color=(0, 1400),
                            mapbox_style="carto-positron",
-                           zoom=8.5, center = {"lat": 1.054507, "lon": 104.004120},
+                           zoom=9, center = {"lat": 1.054507, "lon": 104.004120},
                            opacity=0.5, height=700,
                            hover_name="judul",
                            hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
@@ -190,7 +190,7 @@ with col1:
 
       st.plotly_chart(figbatam, use_container_width=True)
 
-      st.dataframe(df3_batam)
+      #st.dataframe(df3_batam)
 
 
 
