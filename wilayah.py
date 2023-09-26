@@ -186,7 +186,7 @@ with col1:
     )
 )
       
-      st.subheader("Kiriman UOB Batam Sept 2023")
+      st.subheader("Kiriman UOB Batam September 2023")
 
       st.plotly_chart(figbatam, use_container_width=True)
 
