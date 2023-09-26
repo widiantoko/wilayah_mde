@@ -169,7 +169,7 @@ with col1:
       color_continuous_scale="Viridis_r",
                            range_color=(0, 3000),
                            mapbox_style="carto-positron",
-                           zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
+                           zoom=10, center = {"lat": 1.054507, "lon": 104.004120},
                            opacity=0.5, height=700,
                            hover_name="judul",
                            hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
@@ -178,8 +178,8 @@ with col1:
                      )#type: ignore 
       #fig9.update_traces(hovertemplate="<b> {custom_data} Kiriman</b>")
       
-      fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-      fig9.update_layout(
+      figbatam.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+      figbatam.update_layout(
     hoverlabel=dict(
         bgcolor="white",
         font_size=12
@@ -188,7 +188,7 @@ with col1:
       
     
 
-      st.plotly_chart(fig9, use_container_width=True)
+      st.plotly_chart(figbatam, use_container_width=True)
 
 
 
