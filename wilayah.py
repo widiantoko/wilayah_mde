@@ -167,9 +167,9 @@ with col1:
                                   locations=df3_batam["distrik"],
                      featureidkey="properties.WADMKC",color=df3_batam["konid"],
       color_continuous_scale="Viridis_r",
-                           range_color=(0, 3000),
+                           range_color=(0, 1400),
                            mapbox_style="carto-positron",
-                           zoom=8, center = {"lat": 1.054507, "lon": 104.004120},
+                           zoom=8.5, center = {"lat": 1.054507, "lon": 104.004120},
                            opacity=0.5, height=700,
                            hover_name="judul",
                            hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
