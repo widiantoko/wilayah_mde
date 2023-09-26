@@ -158,7 +158,7 @@ with col1:
 )
       
     
-
+      st.subheader("Kiriman UOB Jakarta September 2023")
       st.plotly_chart(fig9, use_container_width=True)
 
 
@@ -169,7 +169,7 @@ with col1:
       color_continuous_scale="Viridis_r",
                            range_color=(0, 1400),
                            mapbox_style="carto-positron",
-                           zoom=9, center = {"lat": 1.054507, "lon": 104.004120},
+                           zoom=10, center = {"lat": 1.054507, "lon": 104.004120},
                            opacity=0.5, height=700,
                            hover_name="judul",
                            hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
