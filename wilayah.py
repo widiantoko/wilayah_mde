@@ -7,7 +7,7 @@ import json
 
 st.set_page_config(page_title="Sebaran Kiriman Jakarta", layout='wide')
 
-col1, col2 = st.columns([5,1] ,gap="small")
+col1, col2 = st.columns([5,2] ,gap="small")
 
 jkt=pd.read_excel("data/UOB_jkt_sept_update4okt.xlsx")
 jkt["join"]=jkt["alam5"].astype(str) +" " + jkt["alam6"].astype(str)
