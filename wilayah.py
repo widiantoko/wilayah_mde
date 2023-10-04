@@ -193,5 +193,6 @@ with col1:
       #st.dataframe(df3_batam)
 
 
-
-
+with col2:
+  st.text(n)
+  st.text(all)
