@@ -74,7 +74,7 @@ for kec in df['kec'].to_list():
 
 
 kec_none=jkt.loc[jkt['kec'].isnull()]
-kec_none.sort_values(by=['join'], ascending=False)
+kec_none.sort_values(by=['kab'], ascending=False)
 #st.dataframe(df_kec)
 st.dataframe(kec_none)
 
