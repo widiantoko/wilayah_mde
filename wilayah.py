@@ -31,7 +31,7 @@ kec_2=[["PALMERAH", "PAL MERAH"], ["KBN JERUK", "KEBON JERUK"]]
 df_kec=pd.DataFrame(kec_2, columns=['alias', 'kec_alias'])
 
 
-jkt.apply[ jkt['join'].str.contains(df_kec['alias']), 'kec'] = df_kec['kec_alias']
+#jkt.apply[ jkt['join'].str.contains(df_kec['alias']), 'kec'] = df_kec['kec_alias']
 
 
 
