@@ -198,5 +198,5 @@ with col2:
   st.header(" ")
   st.header(" ")
   st.text(f"Total Kiriman UOB Jakarta: {all} Dokumen")
-  st.text(f"**{n}** /**{na}**")
+  st.markdown(f"**{n}** / **{na}**")
  
