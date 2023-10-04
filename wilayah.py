@@ -79,10 +79,10 @@ for kec in df['kec'].to_list():
 
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
-kec_pilih=jkt.loc[jkt['alam6'].str.contains("Grogol")]
+#kec_pilih=jkt.loc[jkt['alam6'].str.contains("Grogol")]
 
 #st.dataframe(df_kec)
-st.dataframe(kec_pilih)
+st.dataframe(jkt)
 
 
 
