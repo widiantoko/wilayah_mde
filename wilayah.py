@@ -13,8 +13,8 @@ jkt=pd.read_excel("data/UOB_jkt_sept_update4okt.xlsx")
 jkt["join"]=jkt["alam5"].astype(str) +" " + jkt["alam6"].astype(str)
 jkt['pod'].fillna("empty",inplace=True)
 
-jkt['join'] = jkt['join'].replace('PALMERAH', 'PAL MERAH')
-jkt['join'] = jkt['join'].replace('KBN JERUK', 'KEBON JERUK')
+jkt['join'] = jkt['join'].str.replace('PALMERAH', 'PAL MERAH')
+jkt['join'] = jkt['join'].str.replace('KBN JERUK', 'KEBON JERUK')
 
 
 
