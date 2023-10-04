@@ -195,4 +195,5 @@ with col1:
 
 with col2:
   st.text(n)
+  st.text(na)
   st.text(all)
