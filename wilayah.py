@@ -13,6 +13,10 @@ jkt=pd.read_excel("data/UOB_jkt_sept_update4okt.xlsx")
 jkt["join"]=jkt["alam5"].astype(str) +" " + jkt["alam6"].astype(str)
 jkt['pod'].fillna("empty",inplace=True)
 
+jkt['join'] = jkt['join'].replace('PALMERAH', 'PAL MERAH')
+jkt['join'] = jkt['join'].replace('KBN JERUK', 'KEBON JERUK')
+
+
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
@@ -29,6 +33,8 @@ for kec in df['kec'].to_list():
 
 kec_2=[["PALMERAH", "PAL MERAH"], ["KBN JERUK", "KEBON JERUK"]]
 df_kec=pd.DataFrame(kec_2, columns=['alias', 'kec_alias'])
+
+
 
 
 #jkt.apply[ jkt['join'].str.contains(df_kec['alias']), 'kec'] = df_kec['kec_alias']
