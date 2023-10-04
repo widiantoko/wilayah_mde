@@ -53,6 +53,8 @@ jkt['join'] = jkt['join'].str.replace('PONDOK PINANG', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('DURI KOSAMBI', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('MANGGA DUA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('ANCOL', 'PADEMANGAN')
+jkt['join'] = jkt['join'].str.replace('BANGKA', 'MAMPANG PRAPATAN')
+jkt['join'] = jkt['join'].str.replace('PS MINGGU', 'PASAR MINGGU')
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
