@@ -51,9 +51,11 @@ for kec in df['kec'].to_list():
 #jkt.apply[ jkt['join'].str.contains(df_kec['alias']), 'kec'] = df_kec['kec_alias']
 
 
-
+kec_none=jkt.loc[jkt['kec'].isnull()]
 #st.dataframe(df_kec)
-st.dataframe(jkt['kec'].dropna)
+st.dataframe(kec_none)
+
+
 
 
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
