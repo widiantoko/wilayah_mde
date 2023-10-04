@@ -15,7 +15,7 @@ jkt['pod'].fillna("empty",inplace=True)
 
 jkt['join'] = jkt['join'].str.replace('PALMERAH', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('KBN JERUK', 'KEBON JERUK')
-jkt['join'] = jkt['join'].str.replace('TG PRIOK', 'TANJUNG PRIUK')
+jkt['join'] = jkt['join'].str.replace('TG PRIOK', 'TANJUNG PRIOK')
 
 
 
