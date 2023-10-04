@@ -24,13 +24,16 @@ df = pd.DataFrame(
 ).assign(kec=lambda d: d["distrik"].str.upper())
 
 
-
 for kec in df['kec'].to_list():
   jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
-p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+kec_2=["PALMERAH", "KBN JERUK"] ["PAL MERAH", "KEBON JERUK"]
+df_kec_2=pd.DataFrame(kec_2, columns=['alias', 'kec_alias'])
 
-st.dataframe(jkt)
+
+st.dataframe(df_kec_2)
+
+p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
 df2 = jkt.groupby(['kec'], as_index=False)['konid'].count()
 df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
