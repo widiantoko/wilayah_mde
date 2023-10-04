@@ -20,13 +20,15 @@ jkt['join'] = jkt['join'].str.replace('KB JERUK', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('TG PRIOK',  'TANJUNG PRIOK')
 jkt['join'] = jkt['join'].str.replace('TJ PRIOK', 'TANJUNG PRIOK')
 jkt['join'] = jkt['join'].str.replace('KLP GADING', 'KELAPA GADING')
-jkt['join'] = jkt['join'].str.replace('KBY', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KBYRN', 'KEBAYORAN')
+jkt['join'] = jkt['join'].str.replace('KBY', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KEB LAMA', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('KEB BARU', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SETIA BUDI', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('PULO GADUNG', 'PULOGADUNG')
 jkt['join'] = jkt['join'].str.replace('TN ABANG', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('CEMPAKAPUTIH', 'CEMPAKA PUTIH')
+
 
 
 with open('data/new_jakarta.geojson') as f:
