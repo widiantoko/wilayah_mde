@@ -43,6 +43,7 @@ jkt['join'] = jkt['join'].str.replace('PIK', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('KAMAL MUARA', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('KAPUK MUARA', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('JOGLO', 'KEMBANGAN')
+jkt['join'] = jkt['join'].str.replace('MERUYA', 'KEMBANGAN')
 jkt['join'] = jkt['join'].str.replace('KALI DERES', 'KALIDERES')
 jkt['join'] = jkt['join'].str.replace('PETOJO', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('KEDOYA', 'KEBON JERUK')
@@ -59,7 +60,8 @@ jkt['join'] = jkt['join'].str.replace('BANGKA', 'MAMPANG PRAPATAN')
 jkt['join'] = jkt['join'].str.replace('PS MINGGU', 'PASAR MINGGU')
 jkt['join'] = jkt['join'].str.replace('JAYAKARTA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('BSR', 'BESAR')
-
+jkt['join'] = jkt['join'].str.replace('TAMANSARI', 'TAMAN SARI')
+jkt['join'] = jkt['join'].str.replace('TMN', 'TAMAN')
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
