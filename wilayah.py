@@ -24,6 +24,7 @@ jkt['join'] = jkt['join'].str.replace('SUNTER JAYA', 'TANJUNG PRIOK')
 jkt['join'] = jkt['join'].str.replace('KLP GADING', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('KBYRN', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KBY', 'KEBAYORAN')
+jkt['join'] = jkt['join'].str.replace('KABAYORAN', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KEB LAMA', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('KEB BARU', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SETIA BUDI', 'SETIABUDI')
@@ -32,6 +33,7 @@ jkt['join'] = jkt['join'].str.replace('TN ABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('TNH ABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('CEMPAKAPUTIH', 'CEMPAKA PUTIH')
 jkt['join'] = jkt['join'].str.replace('CEMP PUTIH', 'CEMPAKA PUTIH')
+jkt['join'] = jkt['join'].str.replace('PNTAI', 'PANTAI')
 jkt['join'] = jkt['join'].str.replace('PANTAI INDAH KAPUK', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('PIK', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('KAMAL MUARA', 'PENJARINGAN')
@@ -40,6 +42,10 @@ jkt['join'] = jkt['join'].str.replace('JOGLO', 'KEMBANGAN')
 jkt['join'] = jkt['join'].str.replace('KALI DERES', 'KALIDERES')
 jkt['join'] = jkt['join'].str.replace('PETOJO', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('KEDOYA', 'KEBON JERUK')
+jkt['join'] = jkt['join'].str.replace('JELAMBAR', 'GROGOL PETAMBURAN')
+
+
+
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
