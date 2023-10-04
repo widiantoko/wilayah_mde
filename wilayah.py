@@ -53,7 +53,7 @@ for kec in df['kec'].to_list():
 
 
 #st.dataframe(df_kec)
-st.dataframe(jkt)
+st.dataframe(jkt['kec'].dropna)
 
 
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
