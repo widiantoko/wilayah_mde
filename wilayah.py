@@ -14,6 +14,7 @@ jkt["join"]=jkt["alam4"].astype(str) +" " +jkt["alam5"].astype(str) +" " + jkt["
 jkt['pod'].fillna("empty",inplace=True)
 
 jkt['join'] = jkt['join'].str.replace('PALMERAH', 'PAL MERAH')
+jkt['join'] = jkt['join'].str.replace('KEBUN JERUK', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('KBN JERUK', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('KB JERUK', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('TG PRIOK', 'TANJUNG PRIOK')
