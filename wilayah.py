@@ -33,6 +33,7 @@ jkt['join'] = jkt['join'].str.replace('CEMPAKAPUTIH', 'CEMPAKA PUTIH')
 jkt['join'] = jkt['join'].str.replace('PANTAI INDAH KAPUK', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('PIK', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('KAMAL MUARA', 'PENJARINGAN')
+jkt['join'] = jkt['join'].str.replace('KAPUK MUARA', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('JOGLO', 'KEMBANGAN')
 jkt['join'] = jkt['join'].str.replace('KALI DERES', 'KALIDERES')
 
