@@ -195,6 +195,7 @@ with col1:
 
 with col2:
   
-  st.text("Total Kiriman UOB Jakarta: %{all} Dokumen")
+  st.subheader(" ")
+  st.subheader(f"Total Kiriman UOB Jakarta: {all} Dokumen")
   st.text(n)
   st.text(na)
