@@ -16,8 +16,8 @@ jkt['pod'].fillna("empty",inplace=True)
 jkt['join'] = jkt['join'].str.replace('PALMERAH', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('KBN JERUK', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('TG PRIOK', 'TANJUNG PRIOK')
-
-
+jkt['join'] = jkt['join'].str.replace('TJ PRIOK', 'TANJUNG PRIOK')
+jkt['join'] = jkt['join'].str.replace('KLP GADING', 'KELAPA GADING')
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
