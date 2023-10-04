@@ -33,6 +33,7 @@ jkt['join'] = jkt['join'].str.replace('SETIA BUDI', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('PULO GADUNG', 'PULOGADUNG')
 jkt['join'] = jkt['join'].str.replace('TN ABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('TNH ABANG', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('KARET', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('CEMPAKAPUTIH', 'CEMPAKA PUTIH')
 jkt['join'] = jkt['join'].str.replace('CEMP PUTIH', 'CEMPAKA PUTIH')
 jkt['join'] = jkt['join'].str.replace('PNTAI', 'PANTAI')
@@ -57,6 +58,7 @@ jkt['join'] = jkt['join'].str.replace('BANGKA', 'MAMPANG PRAPATAN')
 jkt['join'] = jkt['join'].str.replace('PS MINGGU', 'PASAR MINGGU')
 jkt['join'] = jkt['join'].str.replace('JAYAKARTA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('BSR', 'BESAR')
+
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
