@@ -158,7 +158,7 @@ with col1:
 )
       
     
-      st.subheader("Kiriman UOB Jakarta September 2023")
+      st.subheader("Kiriman UOB Jakarta September 2023 (Update 4 Okt 2023)")
       st.plotly_chart(fig9, use_container_width=True)
 
 
