@@ -28,10 +28,14 @@ for kec in df['kec'].to_list():
   jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
 kec_2=[["PALMERAH", "KBN JERUK"], ["PAL MERAH", "KEBON JERUK"]]
-df_kec_2=pd.DataFrame(kec_2, columns=['alias', 'kec_alias'])
+df_kec=pd.DataFrame(kec_2, columns=['alias', 'kec_alias'])
+
+for alias in df_kec['kec_alias'].to_list():
+  jkt.loc[ jkt['join'].str.contains(alias), 'kec_alias'] = kec
 
 
-st.dataframe(df_kec_2)
+
+st.dataframe(df_kec)
 
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
