@@ -83,7 +83,7 @@ kec_pilih=jkt[jkt['join'].str.contains("grogol|Grogol",  case = False)]
 #kec_pilih=jkt.set_index('join').filter(like='grogol', axis=0)
 
 #st.dataframe(df_kec)
-st.dataframe(kec_pilih)
+st.dataframe(kec_none)
 
 
 
