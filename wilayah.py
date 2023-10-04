@@ -30,7 +30,7 @@ for kec in df['kec'].to_list():
 
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
-st.dataframe(p_table)
+st.table(p_table)
 
 df2 = jkt.groupby(['kec'], as_index=False)['konid'].count()
 df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
