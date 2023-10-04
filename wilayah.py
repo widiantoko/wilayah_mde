@@ -30,8 +30,8 @@ for kec in df['kec'].to_list():
 kec_2=[["PALMERAH", "PAL MERAH"], ["KBN JERUK", "KEBON JERUK"]]
 df_kec=pd.DataFrame(kec_2, columns=['alias', 'kec_alias'])
 
-for alias in df_kec['alias']:
-  jkt.loc[ jkt['join'].str.contains(alias), 'kec'] = df_kec['kec_alias']
+
+jkt.loc[ jkt['join'].str.contains(df_kec['alias']), 'kec'] = df_kec['kec_alias']
 
 
 
