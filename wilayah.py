@@ -31,8 +31,8 @@ df = pd.DataFrame(
 for kec in df['kec'].to_list():
   jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
-kec_2=[["PALMERAH", "PAL MERAH"], ["KBN JERUK", "KEBON JERUK"]]
-df_kec=pd.DataFrame(kec_2, columns=['alias', 'kec_alias'])
+#kec_2=[["PALMERAH", "PAL MERAH"], ["KBN JERUK", "KEBON JERUK"]]
+#df_kec=pd.DataFrame(kec_2, columns=['alias', 'kec_alias'])
 
 
 
@@ -41,7 +41,7 @@ df_kec=pd.DataFrame(kec_2, columns=['alias', 'kec_alias'])
 
 
 
-st.dataframe(df_kec)
+#st.dataframe(df_kec)
 st.dataframe(jkt)
 
 
