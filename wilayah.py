@@ -65,6 +65,8 @@ jkt['join'] = jkt['join'].str.replace('SIMPRUG', 'KEBAYORAN LAMA')
 
 jkt['join'] = jkt['join'].str.replace('DURI KOSAMBI', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('MANGGA DUA', 'SAWAH BESAR')
+jkt['join'] = jkt['join'].str.replace('PASAR BARU', 'SAWAH BESAR')
+
 jkt['join'] = jkt['join'].str.replace('ANCOL', 'PADEMANGAN')
 jkt['join'] = jkt['join'].str.replace('BANGKA', 'MAMPANG PRAPATAN')
 jkt['join'] = jkt['join'].str.replace('PS MINGGU', 'PASAR MINGGU')
@@ -80,6 +82,8 @@ jkt['join'] = jkt['join'].str.replace('MEDAN MERDEKA', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('SALEMBA', 'SENEN')
 jkt['join'] = jkt['join'].str.replace('SEMANGGI', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 1', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 01', 'TANAH ABANG')
+
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 3', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 7', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 10', 'TANAH ABANG')
