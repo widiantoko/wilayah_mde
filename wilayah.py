@@ -178,7 +178,7 @@ hoverinfo="text"
 
 
 #st.dataframe(df_kec)
-st.dataframe(df3)
+#st.dataframe(df3)
 
 
 
