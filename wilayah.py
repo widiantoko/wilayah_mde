@@ -68,12 +68,17 @@ jkt['join'] = jkt['join'].str.replace('ROXY MAS', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('SEMANGGi', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 52', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 53', 'KEBAYORAN BARU')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 54', 'KEBAYORAN BARU')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 55', 'KEBAYORAN BARU')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 57', 'KEBAYORAN BARU')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 59', 'KEBAYORAN BARU')
 #jkt['join'] = jkt['join'].str.replace('SUDIRMAN', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('THAMRIN', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('SAHARI', 'KEMAYORAN')
 jkt['join'] = jkt['join'].str.replace('CEMPAKA MAS', 'CEMPAKA PUTIH')
 jkt['join'] = jkt['join'].str.replace('IMAM BONJOL', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('PARMAN', 'GROGOL PETAMBURAN')
+jkt['join'] = jkt['join'].str.replace('WISMA KEIAI', 'TANAH ABANG')
 
 
 with open('data/new_jakarta.geojson') as f:
@@ -92,7 +97,7 @@ for kec in df['kec'].to_list():
 
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
-kec_pilih=jkt[jkt['join'].str.contains("Jend|Jendral",  case = False)]
+kec_pilih=jkt[jkt['alam6'].str.contains("Jend|Jendral",  case = False)]
 #kec_pilih=jkt.set_index('join').filter(like='grogol', axis=0)
 
 #st.dataframe(df_kec)
