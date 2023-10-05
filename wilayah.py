@@ -164,6 +164,9 @@ df3["No Status"]= df3["empty"].astype(str)+ " ("+ df3["no_status"].astype(str)+"
 
 
 n=df3["konid"].sum()
+pod_Y=df3["Y"].sum()
+pod_C=df3["C"].sum()
+
 na=jkt['kec'].isna().sum()
 all=jkt['konid'].count()
 
@@ -290,4 +293,6 @@ with col2:
   st.header(" ")
   st.text(f"Total Kiriman UOB Jakarta: {all} Dokumen")
   st.markdown(f"**{n}** / **{na}**")
+  st.markdown(f"**{pod_Y}** / **{pod_C}**")
+ 
  
