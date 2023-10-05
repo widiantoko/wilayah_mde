@@ -67,7 +67,7 @@ jkt['join'] = jkt['join'].str.replace('TMN', 'TAMAN')
 jkt['join'] = jkt['join'].str.replace('ROXY MAS', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('SEMANGGi', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN', 'SETIABUDI')
-
+jkt['join'] = jkt['join'].str.replace('THAMRIN', 'MENTENG')
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
