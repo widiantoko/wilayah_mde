@@ -92,7 +92,7 @@ for kec in df['kec'].to_list():
 
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
-kec_pilih=jkt[jkt['join'].str.contains("Sudirman|SUDIRMAN",  case = False)]
+kec_pilih=jkt[jkt['join'].str.contains("Grogol|grogol",  case = False)]
 #kec_pilih=jkt.set_index('join').filter(like='grogol', axis=0)
 
 #st.dataframe(df_kec)
