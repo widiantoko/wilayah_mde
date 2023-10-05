@@ -88,7 +88,6 @@ jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 70', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 79', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 45', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 9', 'SETIABUDI')
-#jkt['join'] = jkt['join'].str.replace('SUDIRMAN', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('THAMRIN', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('SAHARI', 'KEMAYORAN')
 jkt['join'] = jkt['join'].str.replace('CEMPAKA MAS', 'CEMPAKA PUTIH')
@@ -262,7 +261,7 @@ with col1:
                                   locations=df3_batam["distrik"],
                      featureidkey="properties.WADMKC",color=df3_batam["konid"],
       color_continuous_scale="Viridis_r",
-                           range_color=(0, 1400),
+                           range_color=(0, 1300),
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": 1.054507, "lon": 104.004120},
                            opacity=0.5, height=700,
