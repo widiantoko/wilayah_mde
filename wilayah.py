@@ -62,11 +62,9 @@ jkt['join'] = jkt['join'].str.replace('PONDOK PINANG', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('GANDARIA', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('PERMATA HIJAU', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('SIMPRUG', 'KEBAYORAN LAMA')
-
 jkt['join'] = jkt['join'].str.replace('DURI KOSAMBI', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('MANGGA DUA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('PASAR BARU', 'SAWAH BESAR')
-
 jkt['join'] = jkt['join'].str.replace('ANCOL', 'PADEMANGAN')
 jkt['join'] = jkt['join'].str.replace('BANGKA', 'MAMPANG PRAPATAN')
 jkt['join'] = jkt['join'].str.replace('PS MINGGU', 'PASAR MINGGU')
@@ -141,7 +139,7 @@ kec_pilih=jkt[(jkt['alam6'].str.contains("GAJAH MADA",  na = False, case=False))
 #kec_pilih=jkt.set_index('join').filter(like='grogol', axis=0)
 
 #st.dataframe(df_kec)
-st.dataframe(kec_pilih)
+st.dataframe(kec_none)
 
 
 
