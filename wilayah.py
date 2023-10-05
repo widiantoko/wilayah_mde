@@ -71,7 +71,7 @@ jkt['join'] = jkt['join'].str.replace('THAMRIN', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('SAHARI', 'KEMAYORAN')
 jkt['join'] = jkt['join'].str.replace('CEMPAKA MAS', 'CEMPAKA PUTIH')
 jkt['join'] = jkt['join'].str.replace('IMAM BONJOL', 'MENTENG')
-
+jkt['join'] = jkt['join'].str.replace('PARMAN', 'GROGOL PETAMBURAN')
 
 
 with open('data/new_jakarta.geojson') as f:
