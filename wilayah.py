@@ -96,7 +96,7 @@ kec_pilih=jkt[jkt['join'].str.contains("SUDIRMAN",  case = False)]
 #kec_pilih=jkt.set_index('join').filter(like='grogol', axis=0)
 
 #st.dataframe(df_kec)
-st.dataframe(kec_PILIH)
+st.dataframe(kec_pilih)
 
 
 
