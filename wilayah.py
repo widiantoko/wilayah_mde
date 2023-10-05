@@ -117,7 +117,7 @@ kec_pilih=jkt[(jkt['alam6'].str.contains("Sudirman|SUDIRMAN",  na = False, case=
 #kec_pilih=jkt.set_index('join').filter(like='grogol', axis=0)
 
 #st.dataframe(df_kec)
-st.dataframe(kec_pilih)
+st.dataframe(kec_none)
 
 
 
@@ -172,7 +172,7 @@ for kec in df_batam['kec'].to_list():
 p_batam = pd.pivot_table(batam, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
 
-#st.table(p_batam)
+
 
 
 df2_batam = batam.groupby(['kec'], as_index=False)['konid'].count()
