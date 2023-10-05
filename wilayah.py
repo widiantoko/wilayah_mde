@@ -219,38 +219,6 @@ df3_batam["No Status"]= df3_batam["empty"].astype(str)+ " ("+ df3_batam["no_stat
 
 with col1:
 
-      fig8 = go.Figure(
-    data=go.Choropleth(
-      geojson=geojson,
-      locations=df3["distrik"], 
-      customdata=df3["distrik"],
-      text=df3.apply(lambda row: f"""Sukses: {row['Y']} ({row['sukses']}%)
-                     <br>Reject: {row['C']} ({row['failed']}%)
-                     <br>No Status: {row['empty']} ({row['no_status']}%) """, axis=1),
-      featureidkey="properties.WADMKC",
-      z=df3["konid"], 
-      colorbar_title="<b>Kiriman UOB",
-      colorscale='Greens',
-      autocolorscale=False,
-      name="",
-      hoverlabel=dict(bgcolor="white",font_size=14),
-      hovertemplate="<b>%{customdata} : %{z} Kiriman</b>" + "<br>%{text} <br>"
-          
-        
-    )#type: ignore
-)
-      fig8.update_layout( width=700,height=750,  margin=dict(l=1, r=1, t=1, b=1), title= f"""<br>Sebaran Data Dokumen UOB di Kecamatan DKI Jakarta 
-                   <br>(n : {n} dari {all} Dokumen) """, autosize=True, 
-                 title_y=0.9, title_font_size=22, title_yanchor="top", title_xanchor='left' ,margin_t=50, showlegend=True)
-      fig8.update_geos(fitbounds="locations", visible=False) #type: ignore
-   
-
-      #st.plotly_chart(fig8, use_container_width=True)
-
-
-      
-      
-
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
                                   locations=df3["distrik"],
                      featureidkey="properties.WADMKC",color=df3["konid"],
