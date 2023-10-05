@@ -87,6 +87,7 @@ jkt['join'] = jkt['join'].str.replace('SCBD', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 70', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 79', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 45', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 9', 'SETIABUDI')
 #jkt['join'] = jkt['join'].str.replace('SUDIRMAN', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('THAMRIN', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('SAHARI', 'KEMAYORAN')
@@ -95,7 +96,7 @@ jkt['join'] = jkt['join'].str.replace('IMAM BONJOL', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('PARMAN', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('WISMA KEIAI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('WISMA GKBI', 'TANAH ABANG')
-
+jkt['join'] = jkt['join'].str.replace('MIDPLAZA', 'TANAH ABANG')
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
