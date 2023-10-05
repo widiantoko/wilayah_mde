@@ -72,7 +72,11 @@ jkt['join'] = jkt['join'].str.replace('JAYAKARTA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('BSR', 'BESAR')
 jkt['join'] = jkt['join'].str.replace('TAMANSARI', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('TMN', 'TAMAN')
-jkt['join'] = jkt['join'].str.replace('ROXY MAS', 'GAMBIR')
+jkt['join'] = jkt['join'].str.replace('ROXY', 'GAMBIR')
+jkt['join'] = jkt['join'].str.replace('CIDENG', 'GAMBIR')
+
+jkt['join'] = jkt['join'].str.replace('BALIKPAPAN', 'GAMBIR')
+
 jkt['join'] = jkt['join'].str.replace('SEMANGGI', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 1', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 3', 'TANAH ABANG')
