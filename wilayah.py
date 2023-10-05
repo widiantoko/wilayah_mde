@@ -144,8 +144,6 @@ kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 kec_pilih=jkt[(jkt['alam6'].str.contains("GAJAH MADA",  na = False, case=False)) & (jkt['kec'].isnull())]
 #kec_pilih=jkt.set_index('join').filter(like='grogol', axis=0)
 
-#st.dataframe(df_kec)
-st.dataframe(kec_none)
 
 
 
@@ -173,6 +171,9 @@ all=jkt['konid'].count()
 text=df3.apply(lambda row: f"{row['Y']}%<br>{row['C']}", axis=1),
 hoverinfo="text"
 
+
+#st.dataframe(df_kec)
+st.dataframe(df3)
 
 
 
