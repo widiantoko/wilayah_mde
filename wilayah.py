@@ -34,7 +34,9 @@ jkt['join'] = jkt['join'].str.replace('KLP GDNG', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('KLP GDG', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('BUKIT GADING', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('ARTHA GADING', 'KELAPA GADING')
+
 jkt['join'] = jkt['join'].str.replace('MALL OF INDONESIA', 'KELAPA GADING')
+jkt['join'] = jkt['join'].str.replace('PLAZA SUMMARECON', 'PULOGADUNG')
 
 jkt['join'] = jkt['join'].str.replace('BANDENGAN UTARA', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('BANDENGAN SELATAN', 'PENJARINGAN')
@@ -46,6 +48,7 @@ jkt['join'] = jkt['join'].str.replace('KABAYORAN', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KEB LAMA', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('KEB BARU', 'KEBAYORAN BARU')
 
+jkt['join'] = jkt['join'].str.replace('PONDOK BAMBU', 'DUREN SAWIT')
 
 jkt['join'] = jkt['join'].str.replace('GROGOL SELATAN', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('GROGOL', 'GROGOL PETAMBURAN')
@@ -122,7 +125,9 @@ jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 70', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 79', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 45', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 9', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 25', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 29', 'SETIABUDI')
+
 jkt['join'] = jkt['join'].str.replace('RASUNA SAID', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('THAMRIN', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('SAHARI', 'KEMAYORAN')
