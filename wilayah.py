@@ -15,6 +15,8 @@ jkt['pod'].fillna("empty",inplace=True)
 
 jkt['join'] = jkt['join'].str.replace('  ', ' ')
 jkt['join'] = jkt['join'].str.replace('SLTN', 'SELATAN')
+jkt['join'] = jkt['join'].str.replace('SLT', 'SELATAN')
+
 jkt['join'] = jkt['join'].str.replace('BRT', 'BARAT')
 jkt['join'] = jkt['join'].str.replace('BLVD', 'BOULEVARD')
 jkt['join'] = jkt['join'].str.replace('TMN', 'TAMAN')
@@ -101,7 +103,15 @@ jkt['join'] = jkt['join'].str.replace('KEL KRAMAT', 'SENEN')
 
 jkt['join'] = jkt['join'].str.replace('SENAYAN', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SETIA BUDI', 'SETIABUDI')
+
 jkt['join'] = jkt['join'].str.replace('PULO GADUNG', 'PULOGADUNG')
+jkt['join'] = jkt['join'].str.replace('P GADUNG', 'PULOGADUNG')
+jkt['join'] = jkt['join'].str.replace('CIPINANG', 'PULOGADUNG')
+jkt['join'] = jkt['join'].str.replace('RAWAMANGUN', 'PULOGADUNG')
+jkt['join'] = jkt['join'].str.replace('KAYU PUTIH', 'PULOGADUNG')
+
+
+
 jkt['join'] = jkt['join'].str.replace('TN ABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('TNH ABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('KARET', 'TANAH ABANG')
@@ -191,7 +201,7 @@ jkt['join'] = jkt['join'].str.replace('CASABLANCA', 'TEBET')
 jkt['join'] = jkt['join'].str.replace('KUNINGAN', 'SETIABUDI')
 
 jkt['join'] = jkt['join'].str.replace('CIPINANG MUARA', 'JATINEGARA')
-jkt['join'] = jkt['join'].str.replace('CIPINANG', 'PULOGADUNG')
+
 
 
 
