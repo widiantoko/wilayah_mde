@@ -16,10 +16,8 @@ jkt['pod'].fillna("empty",inplace=True)
 jkt['join'] = jkt['join'].str.replace('  ', ' ')
 jkt['join'] = jkt['join'].str.replace('SLTN', 'SELATAN')
 jkt['join'] = jkt['join'].str.replace('SLT', 'SELATAN')
-
 jkt['join'] = jkt['join'].str.replace('BRT', 'BARAT')
 jkt['join'] = jkt['join'].str.replace('TWR', 'TOWER')
-
 jkt['join'] = jkt['join'].str.replace('BLVD', 'BOULEVARD')
 jkt['join'] = jkt['join'].str.replace('TMN', 'TAMAN')
 jkt['join'] = jkt['join'].str.replace('TM', 'TAMAN')
@@ -29,7 +27,6 @@ jkt['join'] = jkt['join'].str.replace('KMYRN', 'KEMAYORAN')
 jkt['join'] = jkt['join'].str.replace('KAV.', 'KAV ')
 jkt['join'] = jkt['join'].str.replace('KAVL', 'KAV ')
 jkt['join'] = jkt['join'].str.replace('NO KAV', 'KAV ')
-
 jkt['join'] = jkt['join'].str.replace('KELURAHAN', 'KEL')
 
 
