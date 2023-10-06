@@ -79,6 +79,7 @@ jkt['join'] = jkt['join'].str.replace('TAMAN PALEM', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('RUKO HARMONI MAS', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('RUKO GLODOK', 'MANGGA BESAR')
 jkt['join'] = jkt['join'].str.replace('RUKO GREEN GARDEN', 'KEBON JERUK')
+jkt['join'] = jkt['join'].str.replace('RUKAN GREEN GARDEN', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('GREEN VILLE', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('GREENVILLE', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('PALM CROWN', 'KALIDERES')
@@ -319,7 +320,7 @@ kec_pilih=jkt[(jkt['join'].str.contains("RUKAN",  na = False, case=False)) & (jk
 
 
 
-st.dataframe(kec_pilih)
+st.dataframe(kec_none)
 
 
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
