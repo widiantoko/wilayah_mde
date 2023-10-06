@@ -34,6 +34,12 @@ jkt['join'] = jkt['join'].str.replace('KLP GDNG', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('KLP GDG', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('BUKIT GADING', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('ARTHA GADING', 'KELAPA GADING')
+jkt['join'] = jkt['join'].str.replace('MALL OF INDONESIA', 'KELAPA GADING')
+
+jkt['join'] = jkt['join'].str.replace('BANDENGAN UTARA', 'TAMBORA')
+jkt['join'] = jkt['join'].str.replace('BANDENGAN SELATAN', 'PENJARINGAN')
+jkt['join'] = jkt['join'].str.replace('HALIM PERDANA KUSUMA', 'MAKASAR')
+
 jkt['join'] = jkt['join'].str.replace('KBYRN', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KBY', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KABAYORAN', 'KEBAYORAN')
