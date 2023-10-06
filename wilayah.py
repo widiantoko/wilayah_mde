@@ -53,10 +53,18 @@ jkt['join'] = jkt['join'].str.replace('KBY', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KABAYORAN', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KEB LAMA', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('KEB BARU', 'KEBAYORAN BARU')
+jkt['join'] = jkt['join'].str.replace('SAWAHBESAR', 'SAWAH BESAR')
+
+
+
+
+jkt['join'] = jkt['join'].str.replace('KEL PETAMBURAN ', 'TANAH ABANG')
 
 jkt['join'] = jkt['join'].str.replace('PONDOK BAMBU', 'DUREN SAWIT')
 jkt['join'] = jkt['join'].str.replace('BINTARO', 'PESANGGRAHAN')
 jkt['join'] = jkt['join'].str.replace('PONDOK KOPI', 'DUREN SAWIT')
+jkt['join'] = jkt['join'].str.replace('KEDAUNG', 'CENGKARENG')
+jkt['join'] = jkt['join'].str.replace('RAWA BUAYA', 'CENGKARENG')
 
 jkt['join'] = jkt['join'].str.replace('GROGOL SELATAN', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('GROGOL', 'GROGOL PETAMBURAN')
