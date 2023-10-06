@@ -19,6 +19,7 @@ jkt['join'] = jkt['join'].str.replace('BLVD', 'BOULEVARD')
 jkt['join'] = jkt['join'].str.replace('TMN', 'TAMAN')
 jkt['join'] = jkt['join'].str.replace('TM', 'TAMAN')
 jkt['join'] = jkt['join'].str.replace('BSR', 'BESAR')
+jkt['join'] = jkt['join'].str.replace('KAV.', 'KAV ')
 
 jkt['join'] = jkt['join'].str.replace('PALMERAH', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('KEBUN JERUK', 'KEBON JERUK')
@@ -49,6 +50,7 @@ jkt['join'] = jkt['join'].str.replace('KEB LAMA', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('KEB BARU', 'KEBAYORAN BARU')
 
 jkt['join'] = jkt['join'].str.replace('PONDOK BAMBU', 'DUREN SAWIT')
+jkt['join'] = jkt['join'].str.replace('BINTARO', 'PESANGGRAHAN')
 
 jkt['join'] = jkt['join'].str.replace('GROGOL SELATAN', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('GROGOL', 'GROGOL PETAMBURAN')
