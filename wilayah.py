@@ -92,6 +92,7 @@ jkt['join'] = jkt['join'].str.replace('KBY', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KABAYORAN', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KEB LAMA', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('KEB BARU', 'KEBAYORAN BARU')
+jkt['join'] = jkt['join'].str.replace('PAKUBUWONO', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SAWAHBESAR', 'SAWAH BESAR')
 
 jkt['join'] = jkt['join'].str.replace('KEL PETAMBURAN', 'TANAH ABANG')
@@ -232,6 +233,7 @@ jkt['join'] = jkt['join'].str.replace('KUNINGAN', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('CIPINANG MUARA', 'JATINEGARA')
 jkt['join'] = jkt['join'].str.replace('RAWA BUNGA', 'JATINEGARA')
 jkt['join'] = jkt['join'].str.replace('TANJUNG BARAT', 'JAGAKARSA')
+jkt['join'] = jkt['join'].str.replace('KOTA WISATA CIBUBUR', 'CIRACAS')
 
 
 
