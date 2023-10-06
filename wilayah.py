@@ -230,6 +230,7 @@ jkt['join'] = jkt['join'].str.replace('KRAMAT JATI', 'KRAMATJATI')
 jkt['join'] = jkt['join'].str.replace('DURI KOSAMBI', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('KAMAL RAYA', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('RAYA KAMAL', 'CENGKARENG')
+jkt['join'] = jkt['join'].str.replace('DURI RAYA KOSAMBI', 'CENGKARENG')
 
 jkt['join'] = jkt['join'].str.replace('ANCOL', 'PADEMANGAN')
 jkt['join'] = jkt['join'].str.replace('BANGKA', 'MAMPANG PRAPATAN')
