@@ -143,8 +143,8 @@ for kec in df['kec'].to_list():
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 kec_pilih=jkt[(jkt['alam6'].str.contains("GAJAH MADA",  na = False, case=False)) & (jkt['kec'].isnull())]
 
-cth=['KBYRN|KBY']
-kec_cth=jkt[jkt['alm6'].str.contains('KEB|KBY',  na = False, case=False)]
+cth=['KEB|KBY']
+kec_cth=jkt[jkt['alam6'].str.contains('KEB|KBY',  na = False, case=False)]
 
 st.dataframe(kec_cth)
 
