@@ -29,6 +29,8 @@ jkt['join'] = jkt['join'].str.replace('KAVL', 'KAV ')
 jkt['join'] = jkt['join'].str.replace('NO KAV', 'KAV ')
 jkt['join'] = jkt['join'].str.replace('KELURAHAN', 'KEL')
 jkt['join'] = jkt['join'].str.replace('PNTAI', 'PANTAI')
+jkt['join'] = jkt['join'].str.replace('PLZ', 'PLAZA')
+
 
 
 jkt['join'] = jkt['join'].str.replace('MALL OF INDONESIA', 'KELAPA GADING')
@@ -44,6 +46,8 @@ jkt['join'] = jkt['join'].str.replace('ATRIUM PLAZA', 'SENEN')
 jkt['join'] = jkt['join'].str.replace('WISMA KEIAI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('WISMA GKBI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('CHASE PLAZA', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('MENARA BATAVIA', 'SETIABUDI')
+
 
 #jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
 #jkt['join'] = jkt['join'].str.replace('GLODOK PLAZA', 'MANGGA BESAR')
