@@ -71,6 +71,8 @@ jkt['join'] = jkt['join'].str.replace('WISMA INDOMOBIL', 'JATINEGARA')
 jkt['join'] = jkt['join'].str.replace('WISMA 77', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('WISMA RAHARJA', 'CILANDAK')
 jkt['join'] = jkt['join'].str.replace('CITILOFTS', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('RUKO HARMONI MAS', 'PENJARINGAN')
+jkt['join'] = jkt['join'].str.replace('RUKO GLODOK', 'MANGGA BESAR')
 
 #jkt['join'] = jkt['join'].str.replace('GLODOK PLAZA', 'MANGGA BESAR')
 #jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
