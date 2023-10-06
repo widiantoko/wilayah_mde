@@ -200,7 +200,7 @@ kec_pilih=jkt[(jkt['join'].str.contains("PLAZA",  na = False, case=False)) & (jk
 
 #kec_cth=jkt[jkt['alam6'].str.contains('KEBAYORAN|KEB',  na = False, case=False)]
 
-st.dataframe(kec_none)
+st.dataframe(kec_pilih)
 
 
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
