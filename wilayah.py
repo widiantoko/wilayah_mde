@@ -287,7 +287,7 @@ with col1:
 
       st.plotly_chart(figbatam, use_container_width=True)
 
-      st.dataframe(jkt)
+      #st.dataframe(jkt)
 
 
 with col2:
