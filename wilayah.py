@@ -147,7 +147,8 @@ jkt['join'] = jkt['join'].str.replace('SAWAHBESAR', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('MANGGA DUA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('PASAR BARU', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('JAYAKARTA', 'SAWAH BESAR')
-
+jkt['join'] = jkt['join'].str.replace('LAP BANTENG', 'SAWAH BESAR')
+jkt['join'] = jkt['join'].str.replace('LAPANGAN BANTENG', 'SAWAH BESAR')
 
 jkt['join'] = jkt['join'].str.replace('KEL PETAMBURAN', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('BENDUNGAN HILIR', 'TANAH ABANG')
@@ -237,6 +238,7 @@ jkt['join'] = jkt['join'].str.replace('BANGKA', 'MAMPANG PRAPATAN')
 jkt['join'] = jkt['join'].str.replace('PS MINGGU', 'PASAR MINGGU')
 
 jkt['join'] = jkt['join'].str.replace('TAMANSARI', 'TAMAN SARI')
+jkt['join'] = jkt['join'].str.replace('GLODOK', 'TAMAN SARI')
 
 jkt['join'] = jkt['join'].str.replace('SALEMBA', 'SENEN')
 jkt['join'] = jkt['join'].str.replace('SEMANGGI', 'SETIABUDI')
@@ -312,10 +314,10 @@ for kec in df['kec'].to_list():
 
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
-kec_pilih=jkt[(jkt['join'].str.contains("KEMEN",  na = False, case=False)) & (jkt['kec'].isnull())]
+kec_pilih=jkt[(jkt['join'].str.contains("RUKAN",  na = False, case=False)) & (jkt['kec'].isnull())]
 
 
-#kec_cth=jkt[jkt['alam6'].str.contains('KEBAYORAN|KEB',  na = False, case=False)]
+
 
 st.dataframe(kec_pilih)
 
