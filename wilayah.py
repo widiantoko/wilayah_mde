@@ -86,6 +86,9 @@ jkt['join'] = jkt['join'].str.replace('KEB BARU', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SAWAHBESAR', 'SAWAH BESAR')
 
 jkt['join'] = jkt['join'].str.replace('KEL PETAMBURAN', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('BENDUNGAN HILIR', 'TANAH ABANG')
+
+
 jkt['join'] = jkt['join'].str.replace('WIJAYA KUSUMA', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('GONDANGDIA', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('MANGGA BESAR', 'TAMAN SARI')
