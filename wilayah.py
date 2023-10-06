@@ -18,6 +18,8 @@ jkt['join'] = jkt['join'].str.replace('SLTN', 'SELATAN')
 jkt['join'] = jkt['join'].str.replace('SLT', 'SELATAN')
 
 jkt['join'] = jkt['join'].str.replace('BRT', 'BARAT')
+jkt['join'] = jkt['join'].str.replace('TWR', 'TOWER')
+
 jkt['join'] = jkt['join'].str.replace('BLVD', 'BOULEVARD')
 jkt['join'] = jkt['join'].str.replace('TMN', 'TAMAN')
 jkt['join'] = jkt['join'].str.replace('TM', 'TAMAN')
@@ -167,8 +169,6 @@ jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 01', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 3', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 7', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 10', 'TANAH ABANG')
-
-
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 22', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 32', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 33', 'TANAH ABANG')
@@ -205,7 +205,7 @@ jkt['join'] = jkt['join'].str.replace('KUNINGAN', 'SETIABUDI')
 
 jkt['join'] = jkt['join'].str.replace('CIPINANG MUARA', 'JATINEGARA')
 jkt['join'] = jkt['join'].str.replace('RAWA BUNGA', 'JATINEGARA')
-
+jkt['join'] = jkt['join'].str.replace('TANJUNG BARAT', 'JAGAKARSA')
 
 
 
