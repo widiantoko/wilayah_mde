@@ -28,6 +28,7 @@ jkt['join'] = jkt['join'].str.replace('KAV.', 'KAV ')
 jkt['join'] = jkt['join'].str.replace('KAVL', 'KAV ')
 jkt['join'] = jkt['join'].str.replace('NO KAV', 'KAV ')
 jkt['join'] = jkt['join'].str.replace('KELURAHAN', 'KEL')
+jkt['join'] = jkt['join'].str.replace('PNTAI', 'PANTAI')
 
 
 jkt['join'] = jkt['join'].str.replace('MALL OF INDONESIA', 'KELAPA GADING')
@@ -120,7 +121,7 @@ jkt['join'] = jkt['join'].str.replace('KARET', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('KEBON MELATI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('CEMPAKAPUTIH', 'CEMPAKA PUTIH')
 jkt['join'] = jkt['join'].str.replace('CEMP PUTIH', 'CEMPAKA PUTIH')
-jkt['join'] = jkt['join'].str.replace('PNTAI', 'PANTAI')
+
 jkt['join'] = jkt['join'].str.replace('PANTAI INDAH KAPUK', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('PIK', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('KAMAL MUARA', 'PENJARINGAN')
