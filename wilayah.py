@@ -20,6 +20,7 @@ jkt['join'] = jkt['join'].str.replace('TMN', 'TAMAN')
 jkt['join'] = jkt['join'].str.replace('TM', 'TAMAN')
 jkt['join'] = jkt['join'].str.replace('BSR', 'BESAR')
 jkt['join'] = jkt['join'].str.replace('KAV.', 'KAV ')
+jkt['join'] = jkt['join'].str.replace('KELURAHAN', 'KEL')
 
 jkt['join'] = jkt['join'].str.replace('PALMERAH', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('KEBUN JERUK', 'KEBON JERUK')
