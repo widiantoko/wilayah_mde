@@ -82,7 +82,7 @@ jkt['join'] = jkt['join'].str.replace('RUKO GREEN GARDEN', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('GREEN VILLE', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('GREENVILLE', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('PALM CROWN', 'KALIDERES')
-
+jkt['join'] = jkt['join'].str.replace('RUKO IMPERIAL BUSINESS', 'KALIDERES')
 
 #jkt['join'] = jkt['join'].str.replace('GLODOK PLAZA', 'MANGGA BESAR')
 #jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
@@ -222,6 +222,8 @@ jkt['join'] = jkt['join'].str.replace('JELAMBAR', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('KRAMAT JATI', 'KRAMATJATI')
 
 jkt['join'] = jkt['join'].str.replace('DURI KOSAMBI', 'CENGKARENG')
+jkt['join'] = jkt['join'].str.replace('KAMAL RAYA', 'CENGKARENG')
+
 jkt['join'] = jkt['join'].str.replace('ANCOL', 'PADEMANGAN')
 jkt['join'] = jkt['join'].str.replace('BANGKA', 'MAMPANG PRAPATAN')
 jkt['join'] = jkt['join'].str.replace('PS MINGGU', 'PASAR MINGGU')
