@@ -47,6 +47,7 @@ jkt['join'] = jkt['join'].str.replace('WISMA KEIAI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('WISMA GKBI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('CHASE PLAZA', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('MENARA BATAVIA', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('MANGGALA WANABAKTI', 'TANAH ABANG')
 
 
 #jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
@@ -197,6 +198,11 @@ jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 9', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 25', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 29', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 21', 'SETIA BUDI')
+
+jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 24', 'SETIA BUDI')
+jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 34', 'SETIA BUDI')
+jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 35', 'SETIA BUDI')
+jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 37', 'SETIA BUDI')
 
 jkt['join'] = jkt['join'].str.replace('RASUNA SAID', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('THAMRIN', 'MENTENG')
