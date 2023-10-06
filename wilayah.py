@@ -41,6 +41,7 @@ jkt['join'] = jkt['join'].str.replace('MALL OF INDONESIA', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('MOI', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('PLAZA SUMMARECON', 'PULOGADUNG')
 jkt['join'] = jkt['join'].str.replace('MIDPLAZA', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN PARK', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('DUTA MERLIN', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('HARCO MANGGA DUA', 'SAWAH BESAR')
@@ -287,12 +288,12 @@ for kec in df['kec'].to_list():
 
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
-kec_pilih=jkt[(jkt['join'].str.contains("WISMA",  na = False, case=False)) & (jkt['kec'].isnull())]
+kec_pilih=jkt[(jkt['join'].str.contains("RUKO",  na = False, case=False)) & (jkt['kec'].isnull())]
 
 
 #kec_cth=jkt[jkt['alam6'].str.contains('KEBAYORAN|KEB',  na = False, case=False)]
 
-st.dataframe(kec_none)
+st.dataframe(kec_pilih)
 
 
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
