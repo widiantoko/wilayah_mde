@@ -262,12 +262,12 @@ for kec in df['kec'].to_list():
 
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
-kec_pilih=jkt[(jkt['join'].str.contains("WISATA",  na = False, case=False)) & (jkt['kec'].isnull())]
+kec_pilih=jkt[(jkt['join'].str.contains("WISMA",  na = False, case=False)) & (jkt['kec'].isnull())]
 
 
 #kec_cth=jkt[jkt['alam6'].str.contains('KEBAYORAN|KEB',  na = False, case=False)]
 
-st.dataframe(kec_none)
+st.dataframe(kec_pilih)
 
 
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
