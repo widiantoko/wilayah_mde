@@ -13,6 +13,7 @@ jkt=pd.read_excel("data/UOB_sept_update051023.xlsx")
 jkt["join"]=jkt["alam4"].astype(str) +" " +jkt["alam5"].astype(str) +" " + jkt["alam6"].astype(str)
 jkt['pod'].fillna("empty",inplace=True)
 
+jkt['join'] = jkt['join'].str.replace('  ', ' ')
 jkt['join'] = jkt['join'].str.replace('SLTN', 'SELATAN')
 jkt['join'] = jkt['join'].str.replace('BRT', 'BARAT')
 jkt['join'] = jkt['join'].str.replace('BLVD', 'BOULEVARD')
@@ -47,6 +48,7 @@ jkt['join'] = jkt['join'].str.replace('VILLA GADING', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('GADING INDAH', 'KELAPA GADING')
 
 jkt['join'] = jkt['join'].str.replace('PLAZA SUMMARECON', 'PULOGADUNG')
+
 jkt['join'] = jkt['join'].str.replace('BANDENGAN UTARA', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('BANDENGAN SELATAN', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('HALIM PERDANA KUSUMA', 'MAKASAR')
