@@ -48,6 +48,7 @@ jkt['join'] = jkt['join'].str.replace('WISMA GKBI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('CHASE PLAZA', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('MENARA BATAVIA', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('MANGGALA WANABAKTI', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('DIPO TOWER', 'TANAH ABANG')
 
 
 #jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
@@ -189,22 +190,21 @@ jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 57', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 59', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 60', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SCBD', 'KEBAYORAN BARU')
+
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 70', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 76', 'SETIABUDI')
-
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 79', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 45', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 9', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 25', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 29', 'SETIABUDI')
-jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 21', 'SETIA BUDI')
-
-jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 24', 'SETIA BUDI')
-jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 34', 'SETIA BUDI')
-jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 35', 'SETIA BUDI')
-jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 37', 'SETIA BUDI')
-
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 21', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 24', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 34', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 35', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('SUBROTO KAV 37', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('RASUNA SAID', 'SETIABUDI')
+
 jkt['join'] = jkt['join'].str.replace('THAMRIN', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('SAHARI', 'KEMAYORAN')
 jkt['join'] = jkt['join'].str.replace('CEMPAKA MAS', 'CEMPAKA PUTIH')
