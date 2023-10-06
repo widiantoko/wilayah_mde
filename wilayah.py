@@ -142,10 +142,11 @@ for kec in df['kec'].to_list():
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 kec_pilih=jkt[(jkt['alam6'].str.contains("GAJAH MADA",  na = False, case=False)) & (jkt['kec'].isnull())]
-#kec_pilih=jkt.set_index('join').filter(like='grogol', axis=0)
 
+cth=['KBYRN', 'KBY']
+kec_cth=jkt[jkt['join6'].str.contains(cth,  na = False, case=False)]
 
-
+st.dataframe(kec_cth)
 
 
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
