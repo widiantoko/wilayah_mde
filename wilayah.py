@@ -238,8 +238,6 @@ jkt['join'] = jkt['join'].str.replace('PS MINGGU', 'PASAR MINGGU')
 
 jkt['join'] = jkt['join'].str.replace('TAMANSARI', 'TAMAN SARI')
 
-
-
 jkt['join'] = jkt['join'].str.replace('SALEMBA', 'SENEN')
 jkt['join'] = jkt['join'].str.replace('SEMANGGI', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 1', 'TANAH ABANG')
@@ -314,7 +312,7 @@ for kec in df['kec'].to_list():
 
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
-kec_pilih=jkt[(jkt['join'].str.contains("RUKO",  na = False, case=False)) & (jkt['kec'].isnull())]
+kec_pilih=jkt[(jkt['join'].str.contains("KEMEN",  na = False, case=False)) & (jkt['kec'].isnull())]
 
 
 #kec_cth=jkt[jkt['alam6'].str.contains('KEBAYORAN|KEB',  na = False, case=False)]
