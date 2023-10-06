@@ -49,6 +49,9 @@ jkt['join'] = jkt['join'].str.replace('MENARA BATAVIA', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('MANGGALA WANABAKTI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('DIPO TOWER', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SAMPOERNA STRATEGIC', 'SETIA BUDI')
+jkt['join'] = jkt['join'].str.replace('ROXY', 'GAMBIR')
+jkt['join'] = jkt['join'].str.replace('ROXY MAS', 'GAMBIR')
+
 
 #jkt['join'] = jkt['join'].str.replace('GLODOK PLAZA', 'MANGGA BESAR')
 #jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
@@ -112,6 +115,7 @@ jkt['join'] = jkt['join'].str.replace('CEMPAKA BARU', 'KEMAYORAN')
 jkt['join'] = jkt['join'].str.replace('KEL KRAMAT', 'SENEN')
 
 
+
 jkt['join'] = jkt['join'].str.replace('SENAYAN', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SETIA BUDI', 'SETIABUDI')
 
@@ -162,7 +166,6 @@ jkt['join'] = jkt['join'].str.replace('JAYAKARTA', 'SAWAH BESAR')
 
 jkt['join'] = jkt['join'].str.replace('TAMANSARI', 'TAMAN SARI')
 
-jkt['join'] = jkt['join'].str.replace('ROXY', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('CIDENG', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('BALIKPAPAN', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('MEDAN MERDEKA', 'GAMBIR')
