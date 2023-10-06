@@ -35,17 +35,18 @@ jkt['join'] = jkt['join'].str.replace('TJ PRIOK', 'TANJUNG PRIOK')
 jkt['join'] = jkt['join'].str.replace('SUNTER AGUNG', 'TANJUNG PRIOK')
 jkt['join'] = jkt['join'].str.replace('SUNTER JAYA', 'TANJUNG PRIOK')
 jkt['join'] = jkt['join'].str.replace('SUNTER', 'TANJUNG PRIOK')
+
 jkt['join'] = jkt['join'].str.replace('KLP GADING', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('KLP GDNG', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('KLP GDG', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('BUKIT GADING', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('ARTHA GADING', 'KELAPA GADING')
-
 jkt['join'] = jkt['join'].str.replace('MALL OF INDONESIA', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('MOI', 'KELAPA GADING')
+jkt['join'] = jkt['join'].str.replace('VILLA GADING', 'KELAPA GADING')
+jkt['join'] = jkt['join'].str.replace('GADING INDAH', 'KELAPA GADING')
 
 jkt['join'] = jkt['join'].str.replace('PLAZA SUMMARECON', 'PULOGADUNG')
-
 jkt['join'] = jkt['join'].str.replace('BANDENGAN UTARA', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('BANDENGAN SELATAN', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('HALIM PERDANA KUSUMA', 'MAKASAR')
@@ -56,9 +57,6 @@ jkt['join'] = jkt['join'].str.replace('KABAYORAN', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KEB LAMA', 'KEBAYORAN LAMA')
 jkt['join'] = jkt['join'].str.replace('KEB BARU', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SAWAHBESAR', 'SAWAH BESAR')
-
-
-
 
 jkt['join'] = jkt['join'].str.replace('KEL PETAMBURAN', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('WIJAYA KUSUMA', 'GROGOL PETAMBURAN')
@@ -175,6 +173,9 @@ jkt['join'] = jkt['join'].str.replace('KUNINGAN', 'SETIABUDI')
 
 jkt['join'] = jkt['join'].str.replace('CIPINANG MUARA', 'JATINEGARA')
 jkt['join'] = jkt['join'].str.replace('CIPINANG', 'PULOGADUNG')
+
+
+
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
