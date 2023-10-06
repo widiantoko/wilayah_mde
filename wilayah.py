@@ -76,6 +76,7 @@ jkt['join'] = jkt['join'].str.replace('CITILOFTS', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('RUKO HARMONI MAS', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('RUKO GLODOK', 'MANGGA BESAR')
 jkt['join'] = jkt['join'].str.replace('RUKO GREEN GARDEN', 'KEBON JERUK')
+jkt['join'] = jkt['join'].str.replace('RUKO GREEN VILLE', 'KEBON JERUK')
 
 #jkt['join'] = jkt['join'].str.replace('GLODOK PLAZA', 'MANGGA BESAR')
 #jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
