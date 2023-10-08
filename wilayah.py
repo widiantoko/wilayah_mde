@@ -206,6 +206,8 @@ jkt['join'] = jkt['join'].str.replace('PULOMAS', 'PULOGADUNG')
 jkt['join'] = jkt['join'].str.replace('PULO LENTUT', 'PULOGADUNG')
 
 jkt['join'] = jkt['join'].str.replace('GEDONG', 'PASAR REBO')
+jkt['join'] = jkt['join'].str.replace('CILILITAN', 'KRAMATJATI')
+jkt['join'] = jkt['join'].str.replace('KEBON SIRIH', 'MENTENG')
 
 jkt['join'] = jkt['join'].str.replace('CEMPAKAPUTIH', 'CEMPAKA PUTIH')
 jkt['join'] = jkt['join'].str.replace('CEMP PUTIH', 'CEMPAKA PUTIH')
