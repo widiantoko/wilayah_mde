@@ -111,6 +111,8 @@ jkt['join'] = jkt['join'].str.replace('DURI PULO', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('PETOJO', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('GAJAH MADA', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('CIDENG', 'GAMBIR')
+jkt['join'] = jkt['join'].str.replace('BALIK PAPAN', 'GAMBIR')
+
 jkt['join'] = jkt['join'].str.replace('BALIKPAPAN', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('PECENONGAN', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('MEDAN MERDEKA', 'GAMBIR')
@@ -150,6 +152,9 @@ jkt['join'] = jkt['join'].str.replace('PASAR BARU', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('JAYAKARTA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('LAP BANTENG', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('LAPANGAN BANTENG', 'SAWAH BESAR')
+jkt['join'] = jkt['join'].str.replace('KARANG ANYAR', 'SAWAH BESAR')
+jkt['join'] = jkt['join'].str.replace('KARANGANYAR', 'SAWAH BESAR')
+
 
 jkt['join'] = jkt['join'].str.replace('KEL PETAMBURAN', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('BENDUNGAN HILIR', 'TANAH ABANG')
