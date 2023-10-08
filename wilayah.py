@@ -325,7 +325,7 @@ for kec in df['kec'].to_list():
 
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
-kec_pilih=jkt[(jkt['join'].str.contains("HAYAM",  na = False, case=False)) & (jkt['kec'].isnull())]
+kec_pilih=jkt[(jkt['join'].str.contains("LINDETEVES",  na = False, case=False)) & (jkt['kec'].isnull())]
 
 
 
