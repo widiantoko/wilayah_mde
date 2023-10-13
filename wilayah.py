@@ -444,28 +444,28 @@ with col1:
 
 
       
-      figbatam = px.choropleth_mapbox(df3_batam, geojson=geojson01,
-                                  locations=df3_batam["distrik"],
-                     featureidkey="properties.WADMKC",color=df3_batam["konid"],
-      color_continuous_scale="Viridis_r",
-                           range_color=(0, 1300),
-                           mapbox_style="carto-positron",
-                           zoom=10, center = {"lat": 1.054507, "lon": 104.004120},
-                           opacity=0.7, height=700,
-                           hover_name="judul",
-                           hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
+      #figbatam = px.choropleth_mapbox(df3_batam, geojson=geojson01,
+       #                           locations=df3_batam["distrik"],
+        #             featureidkey="properties.WADMKC",color=df3_batam["konid"],
+ #     color_continuous_scale="Viridis_r",
+ #                          range_color=(0, 1300),
+ #                          mapbox_style="carto-positron",
+ #                          zoom=10, center = {"lat": 1.054507, "lon": 104.004120},
+ #                          opacity=0.7, height=700,
+ #                          hover_name="judul",
+ #                          hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
                                     
                           
                      )#type: ignore 
       #fig9.update_traces(hovertemplate="<b> {custom_data} Kiriman</b>")
       
-      figbatam.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-      figbatam.update_layout(
-    hoverlabel=dict(
-        bgcolor="white",
-        font_size=12
-    )
-)
+ #     figbatam.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+  #    figbatam.update_layout(
+ #   hoverlabel=dict(
+ #       bgcolor="white",
+ #       font_size=12
+ #   )
+#)
       
      
 
