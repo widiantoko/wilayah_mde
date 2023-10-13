@@ -456,7 +456,7 @@ with col1:
  #                          hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
                                     
                           
-                     )#type: ignore 
+ #                    )#type: ignore 
       #fig9.update_traces(hovertemplate="<b> {custom_data} Kiriman</b>")
       
  #     figbatam.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
