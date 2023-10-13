@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import json
 
 
-st.set_page_config(page_title="Sebaran Kiriman Jakarta", layout='wide')
+st.set_page_config(page_title="Kiriman Jakarta", layout='wide')
 
 col1, col2 = st.columns([5,2] ,gap="small")
 
@@ -439,7 +439,7 @@ with col1:
 )
       
     
-      st.subheader("Kiriman UOB Jakarta Oktober 2023 (Update 13 Okt 2023)")
+      st.subheader("Kiriman Jakarta Oktober 2023 (Update 13 Okt 2023)")
       st.plotly_chart(fig9, use_container_width=True)
 
 
