@@ -9,7 +9,7 @@ st.set_page_config(page_title="Sebaran Kiriman Jakarta", layout='wide')
 
 col1, col2 = st.columns([5,2] ,gap="small")
 
-jkt=pd.read_excel("data/UOB_sept_update051023.xlsx")
+jkt=pd.read_excel("data/UOB_Jkt_okt.xlsx")
 jkt["join"]=jkt["alam4"].astype(str) +" " +jkt["alam5"].astype(str) +" " + jkt["alam6"].astype(str)
 jkt['pod'].fillna("empty",inplace=True)
 
