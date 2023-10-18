@@ -425,12 +425,12 @@ with col1:
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.7, height=700,
-                           hover_name=None,
+                           hover_name="judul",
                            hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
                                     
                           
                      )#type: ignore 
-      fig9.update_traces(hovertemplate = "%{judul}")
+      #fig9.update_traces(hovertemplate = "%{judul}")
       
       fig9.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
       fig9.update_layout(
