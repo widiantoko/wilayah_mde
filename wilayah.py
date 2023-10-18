@@ -416,9 +416,8 @@ df3_batam["No Status"]= df3_batam["empty"].astype(str)+ " ("+ df3_batam["no_stat
 with col1:
 
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
-                                  locations=df3["distrik"],
-                     featureidkey="properties.WADMKC",color=df3["konid"],
-      color_continuous_scale="Viridis_r",
+                                  locations=df3["distrik"],featureidkey="properties.WADMKC",
+                                  color=df3["konid"],color_continuous_scale="Viridis_r",
                            range_color=(0, 1300),
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
