@@ -424,7 +424,7 @@ with col1:
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.7, height=700,
                            hover_name="judul",
-                           hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
+                           hover_data = {'konid':True, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
                                     
                           
                      )#type: ignore 
