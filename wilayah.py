@@ -371,47 +371,6 @@ all=jkt['konid'].count()
 
 
 
-##----batam-----##
-
-batam=pd.read_excel('data/batam_UOB_sept.xlsx')
-batam["join"]=batam["alam5"].astype(str) +" " + batam["alam6"].astype(str)
-batam['pod'].fillna("empty",inplace=True)
-
-
-with open('data/batam_kec.geojson') as h:
-      geojson01 = json.load(h)
-
-
-
-df_batam = pd.DataFrame(
-    {"distrik": pd.json_normalize(geojson01["features"])["properties.WADMKC"]}
-).assign(kec=lambda d: d["distrik"].str.upper())
-
-
-for kec in df_batam['kec'].to_list():
-  batam.loc[ batam['join'].str.contains(kec), 'kec'] = kec
-
-p_batam = pd.pivot_table(batam, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
-
-
-
-
-
-df2_batam = batam.groupby(['kec'], as_index=False)['konid'].count()
-df2a_batam= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
-df3_batam = pd.merge(pd.merge(df_batam, df2_batam, on='kec', how='left'), p_batam, on='kec', how='left').reset_index(drop=True)
-
-df3_batam["sukses"]=round(df3_batam["Y"] / df3_batam["konid"] * 100,2)
-df3_batam["failed"]=round(df3_batam["C"] / df3_batam["konid"] * 100,2)
-df3_batam["no_status"]=round(df3_batam["empty"] / df3_batam["konid"] * 100,2)
-df3_batam["judul"]=df3_batam["distrik"].astype(str)+ " : " + df3_batam["konid"].astype(str) + " Dokumen"
-df3_batam["Sukses"]= df3_batam["Y"].astype(str)+ " ("+ df3_batam["sukses"].astype(str)+" %)"
-df3_batam["Gagal"]= df3_batam["C"].astype(str)+ " ("+ df3_batam["failed"].astype(str)+" %)"
-df3_batam["No Status"]= df3_batam["empty"].astype(str)+ " ("+ df3_batam["no_status"].astype(str)+" %)"
-
-
-
-
 
 
 
