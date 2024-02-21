@@ -435,6 +435,7 @@ bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
 pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
+new = data_hasil["POD"].isin(["C","Y"])
 
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
@@ -448,7 +449,7 @@ data_hasil= jkt[(jkt['bulan'] == pilihan)]
 #st.dataframe(data_hasil)
 
 
-p_table_hsl = pd.pivot_table(data_hasil, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+p_table_hsl = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 st.dataframe(p_table_hsl)
 
