@@ -348,6 +348,8 @@ jkt['join'] = jkt['join'].str.replace('10130', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('10140', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('10150', 'GAMBIR')
 
+jkt['join'] = jkt['join'].str.replace('10610', 'KEMAYORAN')
+
 jkt['join'] = jkt['join'].str.replace('14240', 'KELAPA GADING')
 
 
