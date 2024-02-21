@@ -265,7 +265,7 @@ jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 32', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 33', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 34', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 44', 'TANAH ABANG')
-jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV45', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN BLK KAV45', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 45', 'TANAH ABANG')
 
 jkt['join'] = jkt['join'].str.replace('SAHID', 'TANAH ABANG')
