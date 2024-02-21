@@ -44,6 +44,8 @@ jkt['join'] = jkt['join'].str.replace('PLAZA SUMMARECON', 'PULOGADUNG')
 
 jkt['join'] = jkt['join'].str.replace('DUTA MERLIN', 'GAMBIR')
 
+jkt['join'] = jkt['join'].str.replace('GREEN SEDAYU BIZ', 'KALIDERES')
+
 jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('PINTU BESAR SELATAN', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('PINTU BESAR', 'TAMAN SARI')
