@@ -448,30 +448,30 @@ data_hasil= jkt[(jkt['bulan'] == pilihan)]
 #st.dataframe(data_hasil)
 
 
-p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+p_table = pd.pivot_table(data_hasil, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 st.dataframe(p_table)
 
 df2 = data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 df2a= data_hasil.groupby(['kec', 'pod'], as_index=False)['konid'].count()
 df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
 
-df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
-df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
-df3["no_status"]=round(df3["empty"] / df3["konid"] * 100,2)
-df3["judul"]=df3["distrik"].astype(str)+ " : " + df3["konid"].astype(str) + " Dokumen"
-df3["Sukses"]= df3["Y"].astype(str)+ " ("+ df3["sukses"].astype(str)+" %)"
-df3["Gagal"]= df3["C"].astype(str)+ " ("+ df3["failed"].astype(str)+" %)"
-df3["No Status"]= df3["empty"].astype(str)+ " ("+ df3["no_status"].astype(str)+" %)"
+#df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
+#df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
+#df3["no_status"]=round(df3["empty"] / df3["konid"] * 100,2)
+#df3["judul"]=df3["distrik"].astype(str)+ " : " + df3["konid"].astype(str) + " Dokumen"
+#df3["Sukses"]= df3["Y"].astype(str)+ " ("+ df3["sukses"].astype(str)+" %)"
+#df3["Gagal"]= df3["C"].astype(str)+ " ("+ df3["failed"].astype(str)+" %)"
+#df3["No Status"]= df3["empty"].astype(str)+ " ("+ df3["no_status"].astype(str)+" %)"
 
 
-n=df3["konid"].sum()
-pod_Y=df3["Y"].sum()
-pod_C=df3["C"].sum()
-pod_empty=df3["empty"].sum()
+#n=df3["konid"].sum()
+#pod_Y=df3["Y"].sum()
+#pod_C=df3["C"].sum()
+#pod_empty=df3["empty"].sum()
 
 
-na=jkt['kec'].isna().sum()
-all=jkt['konid'].count()
+na=data_hasil['kec'].isna().sum()
+all=data_hasil['konid'].count()
 
 
 
