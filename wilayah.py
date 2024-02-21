@@ -315,6 +315,9 @@ jkt['join'] = jkt['join'].str.replace('14460', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('14470', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('10710', 'SAWAH BESAR')
 
+jkt['join'] = jkt['join'].str.replace('11210', 'TAMBORA')
+jkt['join'] = jkt['join'].str.replace('11220', 'TAMBORA')
+
 jkt['join'] = jkt['join'].str.replace('11230', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('11240', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('11250', 'TAMBORA')
@@ -348,7 +351,11 @@ jkt['join'] = jkt['join'].str.replace('11640', 'KEMBANGAN')
 jkt['join'] = jkt['join'].str.replace('11650', 'KEMBANGAN')
 
 
-
+jkt['join'] = jkt['join'].str.replace('11710', 'CENGKARENG')
+jkt['join'] = jkt['join'].str.replace('11720', 'CENGKARENG')
+jkt['join'] = jkt['join'].str.replace('11730', 'CENGKARENG')
+jkt['join'] = jkt['join'].str.replace('11740', 'CENGKARENG')
+jkt['join'] = jkt['join'].str.replace('11750', 'CENGKARENG')
 
 
 with open('data/new_jakarta.geojson') as f:
