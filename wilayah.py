@@ -297,6 +297,7 @@ jkt['join'] = jkt['join'].str.replace('RAWA BUNGA', 'JATINEGARA')
 jkt['join'] = jkt['join'].str.replace('TANJUNG BARAT', 'JAGAKARSA')
 jkt['join'] = jkt['join'].str.replace('KOTA WISATA CIBUBUR', 'CIRACAS')
 
+jkt['join'] = jkt['join'].str.replace('11450', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('11460', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('11480', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('11490', 'GROGOL PETAMBURAN')
@@ -306,11 +307,17 @@ jkt['join'] = jkt['join'].str.replace('11120', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('11150', 'TAMAN SARI')
 
 jkt['join'] = jkt['join'].str.replace('11420', 'PAL MERAH')
+jkt['join'] = jkt['join'].str.replace('11430', 'PAL MERAH')
+jkt['join'] = jkt['join'].str.replace('11440', 'PAL MERAH')
+
+
 jkt['join'] = jkt['join'].str.replace('14460', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('14470', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('10710', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('11230', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('11240', 'TAMBORA')
+jkt['join'] = jkt['join'].str.replace('11250', 'TAMBORA')
+
 jkt['join'] = jkt['join'].str.replace('10750', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('10730', 'SAWAH BESAR')
 
@@ -322,9 +329,8 @@ jkt['join'] = jkt['join'].str.replace('11510', 'KEBON JERUK')
 
 jkt['join'] = jkt['join'].str.replace('10220', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('10230', 'TANAH ABANG')
-jkt['join'] = jkt['join'].str.replace('11230', 'TAMBORA')
-jkt['join'] = jkt['join'].str.replace('11230', 'TAMBORA')
-jkt['join'] = jkt['join'].str.replace('11230', 'TAMBORA')
+
+jkt['join'] = jkt['join'].str.replace('10330', 'MENTENG')
 
 
 
