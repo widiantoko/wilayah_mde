@@ -165,6 +165,8 @@ jkt['join'] = jkt['join'].str.replace('LAPANGAN BANTENG', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('KARANG ANYAR', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('KARANGANYAR', 'SAWAH BESAR')
 
+jkt['join'] = jkt['join'].str.replace('BUNGUR BESAR', 'SENEN')
+
 
 jkt['join'] = jkt['join'].str.replace('KEL PETAMBURAN', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('BENDUNGAN HILIR', 'TANAH ABANG')
