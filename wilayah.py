@@ -300,8 +300,12 @@ jkt['join'] = jkt['join'].str.replace('KOTA WISATA CIBUBUR', 'CIRACAS')
 jkt['join'] = jkt['join'].str.replace('11460', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('11120', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('11420', 'PAL MERAH')
+jkt['join'] = jkt['join'].str.replace('14460', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('14470', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('10710', 'SAWAH BESAR')
+jkt['join'] = jkt['join'].str.replace('11230', 'TAMBORA')
+jkt['join'] = jkt['join'].str.replace('10750', 'SAWAH BESAR')
+jkt['join'] = jkt['join'].str.replace('14240', 'KELAPA GADING')
 
 
 
