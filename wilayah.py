@@ -435,7 +435,7 @@ bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
 pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
-new = data_hasil["POD"].isin(["C","Y"])
+new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
 
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
