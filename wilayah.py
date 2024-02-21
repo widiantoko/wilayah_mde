@@ -438,7 +438,7 @@ pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "colla
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
-
+st.dataframe(new)
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
@@ -453,7 +453,7 @@ new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
 
 p_table_hsl = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
-st.dataframe(p_table_hsl)
+
 
 df2 = jkt.groupby(['kec'], as_index=False)['konid'].count()
 df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
