@@ -180,7 +180,9 @@ jkt['join'] = jkt['join'].str.replace('TNH ABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('KARET', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('KEBON MELATI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('PEJOMPONGAN', 'TANAH ABANG')
-
+jkt['join'] = jkt['join'].str.replace('BENHIL', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('BENHILL', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('PENJERNIHAN', 'TANAH ABANG')
 
 jkt['join'] = jkt['join'].str.replace('GONDANGDIA', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('MANGGA BESAR', 'TAMAN SARI')
@@ -328,6 +330,10 @@ jkt['join'] = jkt['join'].str.replace('11120', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('11130', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('11140', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('11150', 'TAMAN SARI')
+jkt['join'] = jkt['join'].str.replace('11160', 'TAMAN SARI')
+jkt['join'] = jkt['join'].str.replace('11170', 'TAMAN SARI')
+jkt['join'] = jkt['join'].str.replace('11180', 'TAMAN SARI')
+
 
 jkt['join'] = jkt['join'].str.replace('11410', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('11420', 'PAL MERAH')
