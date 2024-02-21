@@ -46,6 +46,7 @@ jkt['join'] = jkt['join'].str.replace('DUTA MERLIN', 'GAMBIR')
 
 jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('PINTU BESAR SELATAN', 'TAMAN SARI')
+jkt['join'] = jkt['join'].str.replace('PINTU BESAR', 'TAMAN SARI')
 
 jkt['join'] = jkt['join'].str.replace('HARCO MANGGA DUA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('WISMA 46', 'TANAH ABANG')
@@ -311,6 +312,7 @@ jkt['join'] = jkt['join'].str.replace('KOTA WISATA CIBUBUR', 'CIRACAS')
 
 jkt['join'] = jkt['join'].str.replace('11450', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('11460', 'GROGOL PETAMBURAN')
+jkt['join'] = jkt['join'].str.replace('11470', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('11480', 'GROGOL PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('11490', 'GROGOL PETAMBURAN')
 
@@ -320,6 +322,7 @@ jkt['join'] = jkt['join'].str.replace('11130', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('11140', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('11150', 'TAMAN SARI')
 
+jkt['join'] = jkt['join'].str.replace('11410', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('11420', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('11430', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('11440', 'PAL MERAH')
@@ -335,6 +338,8 @@ jkt['join'] = jkt['join'].str.replace('11220', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('11230', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('11240', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('11250', 'TAMBORA')
+jkt['join'] = jkt['join'].str.replace('11330', 'TAMBORA')
+
 
 jkt['join'] = jkt['join'].str.replace('10750', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('10730', 'SAWAH BESAR')
