@@ -297,7 +297,7 @@ jkt['join'] = jkt['join'].str.replace('RAWA BUNGA', 'JATINEGARA')
 jkt['join'] = jkt['join'].str.replace('TANJUNG BARAT', 'JAGAKARSA')
 jkt['join'] = jkt['join'].str.replace('KOTA WISATA CIBUBUR', 'CIRACAS')
 
-
+jkt['join'] = jkt['join'].str.replace('11460', 'GROGOL PETAMBURAN')
 
 
 
