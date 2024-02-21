@@ -435,7 +435,7 @@ for kec in df['kec'].to_list():
 bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
 pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
 
-data_hasil= jkt.groupby(['bulan']).apply(lambda x: x[x['bulan'] == pilihan]['konid'].count())
+data_hasil= jkt[(jkt[bulan] == pilihan)]
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
