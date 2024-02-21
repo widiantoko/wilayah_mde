@@ -417,9 +417,6 @@ jkt['join'] = jkt['join'].str.replace('11730', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('11740', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('11750', 'CENGKARENG')
 
-bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
-pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
-data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 
@@ -435,6 +432,10 @@ df = pd.DataFrame(
 
 for kec in df['kec'].to_list():
   jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
+
+bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
+pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
+data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 
