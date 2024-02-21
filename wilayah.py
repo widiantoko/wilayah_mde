@@ -419,10 +419,8 @@ jkt['join'] = jkt['join'].str.replace('11750', 'CENGKARENG')
 
 
 
-
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
-
 
 
 df = pd.DataFrame(
@@ -439,10 +437,10 @@ data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 
-kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
+#kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
 #kec_pilih=jkt[(jkt['join'].str.contains("PANJAITAN",  na = False, case=False)) & (jkt['kec'].isnull())]
-kec_pilih=jkt[(jkt['kec'].isnull())]
+#kec_pilih=jkt[(jkt['kec'].isnull())]
 
 
 
@@ -450,7 +448,7 @@ kec_pilih=jkt[(jkt['kec'].isnull())]
 #st.dataframe(data_hasil)
 
 
-p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+p_table = pd.pivot_table(data_hasil, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
 df2 = data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 df2a= data_hasil.groupby(['kec', 'pod'], as_index=False)['konid'].count()
