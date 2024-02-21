@@ -100,6 +100,8 @@ jkt['join'] = jkt['join'].str.replace('KBN JRK', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('JRK', 'JERUK')
 jkt['join'] = jkt['join'].str.replace('KB JERUK', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('KEDOYA', 'KEBON JERUK')
+jkt['join'] = jkt['join'].str.replace('KLP DUA RAYA', 'KEBON JERUK')
+
 
 jkt['join'] = jkt['join'].str.replace('TG PRIOK',  'TANJUNG PRIOK')
 jkt['join'] = jkt['join'].str.replace('TJ PRIOK', 'TANJUNG PRIOK')
@@ -128,6 +130,7 @@ jkt['join'] = jkt['join'].str.replace('GADING INDAH', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('BANDENGAN UTARA', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('DURI SELATAN', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('JEMBATAN LIMA', 'TAMBORA')
+jkt['join'] = jkt['join'].str.replace('ROA MALAKA', 'TAMBORA')
 
 jkt['join'] = jkt['join'].str.replace('HALIM PERDANA KUSUMA', 'MAKASAR')
 jkt['join'] = jkt['join'].str.replace('HALIM PERDANAKUSUMA', 'MAKASAR')
@@ -163,6 +166,8 @@ jkt['join'] = jkt['join'].str.replace('TN ABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('TNH ABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('KARET', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('KEBON MELATI', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('PEJOMPONGAN', 'TANAH ABANG')
+
 
 jkt['join'] = jkt['join'].str.replace('GONDANGDIA', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('MANGGA BESAR', 'TAMAN SARI')
