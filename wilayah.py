@@ -10,8 +10,8 @@ st.set_page_config(page_title="Kiriman Jakarta", layout='wide')
 col1, col2 = st.columns([5,2] ,gap="small")
 
 #jkt=pd.read_excel("data/baru.xlsx")
-jkt=pd.read_excel("data/baru_UOB_Jkt.xlsx")
-#jkt["join"]=jkt["alam4"].astype(str) +" "+jkt["alam5"].astype(str) +" "+jkt["alam6"].astype(str)
+jkt=pd.read_excel("data/baru_UOB.xlsx")
+jkt["join"]=jkt["alam4"].astype(str) +" "+jkt["alam5"].astype(str) +" "+jkt["alam6"].astype(str)
 jkt["join"]=jkt["alam4"].astype(str) +" "+jkt["alam5"].astype(str)
 jkt['pod'].fillna("empty",inplace=True)
 
