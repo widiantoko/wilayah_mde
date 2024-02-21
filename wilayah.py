@@ -240,6 +240,7 @@ jkt['join'] = jkt['join'].str.replace('PS MINGGU', 'PASAR MINGGU')
 
 jkt['join'] = jkt['join'].str.replace('TAMANSARI', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('GLODOK', 'TAMAN SARI')
+jkt['join'] = jkt['join'].str.replace('LINDETEVES', 'TAMAN SARI')
 
 jkt['join'] = jkt['join'].str.replace('SALEMBA', 'SENEN')
 jkt['join'] = jkt['join'].str.replace('SEMANGGI', 'SETIABUDI')
@@ -295,7 +296,7 @@ jkt['join'] = jkt['join'].str.replace('CIPINANG MUARA', 'JATINEGARA')
 jkt['join'] = jkt['join'].str.replace('RAWA BUNGA', 'JATINEGARA')
 jkt['join'] = jkt['join'].str.replace('TANJUNG BARAT', 'JAGAKARSA')
 jkt['join'] = jkt['join'].str.replace('KOTA WISATA CIBUBUR', 'CIRACAS')
-jkt['join'] = jkt['join'].str.replace('LINDETEVES', 'MANGGA BESAR')
+
 
 
 
