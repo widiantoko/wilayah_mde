@@ -40,10 +40,13 @@ jkt['join'] = jkt['join'].str.replace('PTMBRN', 'PETAMBURAN')
 jkt['join'] = jkt['join'].str.replace('MALL OF INDONESIA', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('MOI', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('PLAZA SUMMARECON', 'PULOGADUNG')
-jkt['join'] = jkt['join'].str.replace('MIDPLAZA', 'TANAH ABANG')
-jkt['join'] = jkt['join'].str.replace('SUDIRMAN PARK', 'TANAH ABANG')
+
+
 jkt['join'] = jkt['join'].str.replace('DUTA MERLIN', 'GAMBIR')
+
 jkt['join'] = jkt['join'].str.replace('HARMONI PLAZA', 'TAMAN SARI')
+jkt['join'] = jkt['join'].str.replace('PINTU BESAR SELATAN', 'TAMAN SARI')
+
 jkt['join'] = jkt['join'].str.replace('HARCO MANGGA DUA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('WISMA 46', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('WISMA MANDIRI', 'MENTENG')
@@ -59,6 +62,9 @@ jkt['join'] = jkt['join'].str.replace('MENARA BATAVIA', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('MANGGALA WANABAKTI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('DIPO TOWER', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('BATAVIA TOWER', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN PARK', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('MIDPLAZA', 'TANAH ABANG')
+
 jkt['join'] = jkt['join'].str.replace('SAMPOERNA STRATEGIC', 'SETIA BUDI')
 jkt['join'] = jkt['join'].str.replace('ROXY', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('ROXY MAS', 'GAMBIR')
