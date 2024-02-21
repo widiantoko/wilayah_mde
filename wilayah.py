@@ -453,7 +453,7 @@ st.dataframe(p_table)
 
 df2 = data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 df2a= data_hasil.groupby(['kec', 'pod'], as_index=False)['konid'].count()
-df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
+df3 = pd.merge(pd.merge(data_hasil, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
 
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
 df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
