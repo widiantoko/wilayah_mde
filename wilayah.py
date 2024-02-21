@@ -161,6 +161,7 @@ jkt['join'] = jkt['join'].str.replace('SENAYAN', 'KEBAYORAN BARU')
 
 jkt['join'] = jkt['join'].str.replace('SAWAHBESAR', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('MANGGA DUA', 'SAWAH BESAR')
+jkt['join'] = jkt['join'].str.replace('MANGGA II', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('PASAR BARU', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('JAYAKARTA', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('LAP BANTENG', 'SAWAH BESAR')
@@ -406,8 +407,8 @@ for kec in df['kec'].to_list():
 
 kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
-#kec_pilih=jkt[(jkt['join'].str.contains("MELAYU",  na = False, case=False)) & (jkt['kec'].isnull())]
-kec_pilih=jkt[(jkt['kec'].isnull())]
+kec_pilih=jkt[(jkt['join'].str.contains("PANJAITAN",  na = False, case=False)) & (jkt['kec'].isnull())]
+#kec_pilih=jkt[(jkt['kec'].isnull())]
 
 
 
