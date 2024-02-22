@@ -7,7 +7,7 @@ import json
 
 st.set_page_config(page_title="Kiriman Jakarta", layout='wide')
 
-col1, col2 = st.columns([5,2] ,gap="small")
+col1, col2 = st.columns([2,2] ,gap="small")
 
 #jkt=pd.read_excel("data/baru.xlsx")
 #jkt=pd.read_excel("data/baru_UOB.xlsx")
@@ -620,4 +620,6 @@ with col2:
   st.markdown(f"**{pod_Y}** / **{pod_C}** / **{pod_empty}**")
  
  
+pilih_2=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
+data_hasil= jkt[(jkt['bulan'] == pilih_2)]
  
