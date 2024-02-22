@@ -613,12 +613,12 @@ with col1:
       
 with col2:
   
-  st.header(" ")
-  st.header(" ")
-  st.text(f"Jumlah Kiriman UOB {pilihan} : {all} Dokumen")
-  st.markdown(f"**{n}** / **{na}**")
-  st.markdown(f"**{pod_Y}** / **{pod_C}** / **{pod_empty}**")
-  
-  pilih_2=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
-  data_hasil= jkt[(jkt['bulan'] == pilih_2)]
+      st.header(" ")
+      st.header(" ")
+      st.text(f"Jumlah Kiriman UOB {pilihan} : {all} Dokumen")
+      st.markdown(f"**{n}** / **{na}**")
+      st.markdown(f"**{pod_Y}** / **{pod_C}** / **{pod_empty}**")
+
+      pilih_2=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
+      data_hasil= jkt[(jkt['bulan'] == pilih_2)]
  
