@@ -13,11 +13,11 @@ col1, col2 = st.columns([5,2] ,gap="small")
 #jkt=pd.read_excel("data/baru_UOB.xlsx")
 jkt=pd.read_csv("data/baru.csv")
 
-#jkt["join"]=jkt["alam4"].astype(str) +" "+jkt["alam5"].astype(str) +" "+jkt["alam6"].astype(str)
+jkt["join"]=jkt["alam4"].astype(str) +" "+jkt["alam5"].astype(str) +" "+jkt["alam6"].astype(str)
 
 
 #concatenatedString = " ".join (["Programming", "is", "fun."])
-jkt["join"]=" ".join(["alam4", "alam5", "alam6"])
+#jkt["join"]=" ".join(["alam4", "alam5", "alam6"])
 jkt['pod'].fillna("empty",inplace=True)
 
 jkt['join'] = jkt['join'].str.replace('  ', ' ')
@@ -457,8 +457,8 @@ new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='k
 new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 new_3=pd.merge(new_2, new_1, on='kec', how='left').reset_index(drop=True)
 
-#new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
-#new_3["empty"]=new_3["konid"]-new_3["C"]
+new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
+new_3["empty"]=new_3["konid"]-new_3["C"]
 
 
 df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
