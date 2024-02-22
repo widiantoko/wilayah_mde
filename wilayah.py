@@ -17,7 +17,7 @@ jkt["join"]=jkt["alam4"].astype(str) +" "+jkt["alam5"].astype(str) +" "+jkt["ala
 #jkt["join"] = jkt[['alam4', 'alam5', 'alam6']].astype(str)
 
 
-jkt['pod'].fillna("empty",inplace=True)
+#jkt['pod'].fillna("empty",inplace=True)
 
 jkt['join'] = jkt['join'].str.replace('  ', ' ')
 jkt['join'] = jkt['join'].str.replace('SLTN', 'SELATAN')
@@ -452,10 +452,10 @@ data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
-new_AA = data_hasil[data_hasil['pod'].isin(['C','Y','empty'])]
+#new_AA = data_hasil[data_hasil['pod'].isin(['C','Y','empty'])]
 
 new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
-new_1AA= p_table = pd.pivot_table(new_AA, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+#new_1AA= p_table = pd.pivot_table(new_AA, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
 new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 new_3=pd.merge(new_2, new_1, on='kec', how='left').reset_index(drop=True)
