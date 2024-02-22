@@ -458,7 +458,7 @@ new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 new_3=pd.merge(new_2, new_1, on='kec', how='left').reset_index(drop=True)
 
 new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
-new_3["empty"]=new_3["konid"]-new_3["C"]
+#new_3["empty"]=new_3["konid"]-new_3["C"]
 
 
 df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
