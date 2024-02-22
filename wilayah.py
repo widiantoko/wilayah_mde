@@ -541,6 +541,12 @@ for kec in df['kec'].to_list():
 
 bulan=jkt['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
 pilihan=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
+
+
+pilih_2=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
+data_hasil2= jkt[(jkt['bulan'] == pilih_2)]
+
+
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
@@ -618,6 +624,5 @@ with col2:
       st.markdown(f"**{n}** / **{na}**")
       st.markdown(f"**{pod_Y}** / **{pod_C}** / **{pod_empty}**")
 
-      pilih_2=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
-      data_hasil= jkt[(jkt['bulan'] == pilih_2)]
+     
  
