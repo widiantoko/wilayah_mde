@@ -14,7 +14,7 @@ col1, col2 = st.columns([5,2] ,gap="small")
 jkt=pd.read_csv("data/baru.csv")
 
 #jkt["join"]=jkt["alam4"].astype(str) +" "+jkt["alam5"].astype(str) +" "+jkt["alam6"].astype(str)
-jkt["join"] = jkt[['alam4', 'alam5', 'alam6']]
+jkt["join"] = jkt[['alam4', 'alam5', 'alam6']].astype(str)
 
 #df["Period"] = df[["Courses", "Duration"]].apply("-".join, axis=1)
 
