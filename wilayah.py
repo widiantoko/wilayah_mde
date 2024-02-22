@@ -185,6 +185,9 @@ jkt['join'] = jkt['join'].str.replace('LAP BANTENG', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('LAPANGAN BANTENG', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('KARANG ANYAR', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('KARANGANYAR', 'SAWAH BESAR')
+jkt['join'] = jkt['join'].str.replace('KEL KARTINI', 'SAWAH BESAR')
+jkt['join'] = jkt['join'].str.replace('KEL.KARTINI', 'SAWAH BESAR')
+
 
 jkt['join'] = jkt['join'].str.replace('BUNGUR BESAR', 'SENEN')
 jkt['join'] = jkt['join'].str.replace('PASEBAN', 'SENEN')
@@ -195,6 +198,8 @@ jkt['join'] = jkt['join'].str.replace('KEBON KACANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('TN ABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('TNABANG', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('TNABG', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('TNH ABANG', 'TANAH ABANG')
+
 
 jkt['join'] = jkt['join'].str.replace('KARET', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('KEBON MELATI', 'TANAH ABANG')
@@ -253,6 +258,8 @@ jkt['join'] = jkt['join'].str.replace('PULO LENTUT', 'PULOGADUNG')
 jkt['join'] = jkt['join'].str.replace('GEDONG', 'PASAR REBO')
 jkt['join'] = jkt['join'].str.replace('CILILITAN', 'KRAMATJATI')
 jkt['join'] = jkt['join'].str.replace('KEBON SIRIH', 'MENTENG')
+jkt['join'] = jkt['join'].str.replace('PEGANGSAAN', 'MENTENG')
+
 
 jkt['join'] = jkt['join'].str.replace('CEMPAKAPUTIH', 'CEMPAKA PUTIH')
 jkt['join'] = jkt['join'].str.replace('CEMP PUTIH', 'CEMPAKA PUTIH')
@@ -381,8 +388,12 @@ jkt['join'] = jkt['join'].str.replace('11430', 'PAL MERAH')
 jkt['join'] = jkt['join'].str.replace('11440', 'PAL MERAH')
 
 
+jkt['join'] = jkt['join'].str.replace('14430', 'PADEMANGAN')
+jkt['join'] = jkt['join'].str.replace('14440', 'PENJARINGAN')
+jkt['join'] = jkt['join'].str.replace('14450', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('14460', 'PENJARINGAN')
 jkt['join'] = jkt['join'].str.replace('14470', 'PENJARINGAN')
+
 jkt['join'] = jkt['join'].str.replace('10710', 'SAWAH BESAR')
 
 jkt['join'] = jkt['join'].str.replace('11210', 'TAMBORA')
