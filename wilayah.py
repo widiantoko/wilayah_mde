@@ -182,7 +182,7 @@ jkt['join'] = jkt['join'].str.replace('KARANG ANYAR', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('KARANGANYAR', 'SAWAH BESAR')
 
 jkt['join'] = jkt['join'].str.replace('BUNGUR BESAR', 'SENEN')
-
+jkt['join'] = jkt['join'].str.replace('PASEBAN', 'SENEN')
 
 jkt['join'] = jkt['join'].str.replace('KEL PETAMBURAN', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('BENDUNGAN HILIR', 'TANAH ABANG')
@@ -394,6 +394,9 @@ jkt['join'] = jkt['join'].str.replace('10140', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('10150', 'GAMBIR')
 
 jkt['join'] = jkt['join'].str.replace('10610', 'KEMAYORAN')
+jkt['join'] = jkt['join'].str.replace('10620', 'KEMAYORAN')
+jkt['join'] = jkt['join'].str.replace('10630', 'KEMAYORAN')
+jkt['join'] = jkt['join'].str.replace('10640', 'KEMAYORAN')
 
 jkt['join'] = jkt['join'].str.replace('14240', 'KELAPA GADING')
 
