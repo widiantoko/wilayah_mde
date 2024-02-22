@@ -456,6 +456,8 @@ new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
 new_AA = data_hasil[data_hasil['pod'].isin(['C','Y',' '])]
 
 new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+new_1AA= p_table = pd.pivot_table(new_AA, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+
 new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 new_3=pd.merge(new_2, new_1, on='kec', how='left').reset_index(drop=True)
 
@@ -465,7 +467,7 @@ new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
 
 df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
-st.dataframe(new_AA)
+st.dataframe(new_1AA)
 #st.dataframe(new_2)
 #st.dataframe(df3)
 
@@ -490,7 +492,7 @@ kec_pilih=jkt[(jkt['kec'].isnull())]
 #df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
 
 #
-st.dataframe(kec_pilih)
+#st.dataframe(kec_pilih)
 
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
 df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
