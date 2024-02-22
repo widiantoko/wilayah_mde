@@ -470,7 +470,7 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 
 
-st.list(bulan)
+st.text(bulan)
 
 
 #p_table_hsl = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
