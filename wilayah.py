@@ -438,7 +438,7 @@ pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "colla
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
-new_1= data_hasil.groupby(['kec', 'pod'], as_index=False)['konid'].count()
+new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 
 st.dataframe(new_1)
