@@ -120,6 +120,7 @@ jkt['join'] = jkt['join'].str.replace('KB JERUK', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('KEDOYA', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('KLP DUA RAYA', 'KEBON JERUK')
 jkt['join'] = jkt['join'].str.replace('DURI KEPA', 'KEBON JERUK')
+jkt['join'] = jkt['join'].str.replace('KEL KELAPA DUA', 'KEBON JERUK')
 
 
 jkt['join'] = jkt['join'].str.replace('TG PRIOK',  'TANJUNG PRIOK')
@@ -227,6 +228,7 @@ jkt['join'] = jkt['join'].str.replace('HARAPAN MULIA', 'KEMAYORAN')
 jkt['join'] = jkt['join'].str.replace('SAHARI', 'KEMAYORAN')
 
 jkt['join'] = jkt['join'].str.replace('KEL KRAMAT', 'SENEN')
+jkt['join'] = jkt['join'].str.replace('KEL KWITANG', 'SENEN')
 
 jkt['join'] = jkt['join'].str.replace('SETIA BUDI', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('STIABDI', 'SETIABUDI')
@@ -415,8 +417,11 @@ jkt['join'] = jkt['join'].str.replace('10140', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('10150', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('10160', 'GAMBIR')
 
+jkt['join'] = jkt['join'].str.replace('10210', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('10220', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('10230', 'TANAH ABANG')
+
+
 
 jkt['join'] = jkt['join'].str.replace('10310', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('10320', 'MENTENG')
@@ -424,6 +429,10 @@ jkt['join'] = jkt['join'].str.replace('10330', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('10340', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('10350', 'MENTENG')
 
+
+jkt['join'] = jkt['join'].str.replace('10420', 'SENEN')
+jkt['join'] = jkt['join'].str.replace('10430', 'SENEN')
+jkt['join'] = jkt['join'].str.replace('10440', 'SENEN')
 jkt['join'] = jkt['join'].str.replace('10450', 'SENEN')
 jkt['join'] = jkt['join'].str.replace('10460', 'SENEN')
 
