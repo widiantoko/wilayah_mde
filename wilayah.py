@@ -456,7 +456,7 @@ new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
 new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 new_3=pd.merge(new_2, new_1, on='kec', how='left').reset_index(drop=True)
-new_3['empty']=new_3['konid']-new_3['Y']-new_3['C']
+new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
 df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 #st.dataframe(new_1)
