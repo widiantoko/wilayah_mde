@@ -204,6 +204,7 @@ jkt['join'] = jkt['join'].str.replace('PEGADUNGAN', 'KALIDERES')
 jkt['join'] = jkt['join'].str.replace('SEMANAN', 'KALIDERES')
 
 jkt['join'] = jkt['join'].str.replace('BINTARO', 'PESANGGRAHAN')
+jkt['join'] = jkt['join'].str.replace('PSGGRAHAN', 'PESANGGRAHAN')
 
 jkt['join'] = jkt['join'].str.replace('KEDAUNG', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('RAWA BUAYA', 'CENGKARENG')
@@ -223,6 +224,7 @@ jkt['join'] = jkt['join'].str.replace('SAHARI', 'KEMAYORAN')
 jkt['join'] = jkt['join'].str.replace('KEL KRAMAT', 'SENEN')
 
 jkt['join'] = jkt['join'].str.replace('SETIA BUDI', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('STIABDI', 'SETIABUDI')
 
 jkt['join'] = jkt['join'].str.replace('PULO GADUNG', 'PULOGADUNG')
 jkt['join'] = jkt['join'].str.replace('P GADUNG', 'PULOGADUNG')
@@ -266,6 +268,9 @@ jkt['join'] = jkt['join'].str.replace('DURI KOSAMBI', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('KAMAL RAYA', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('RAYA KAMAL', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('DURI RAYA KOSAMBI', 'CENGKARENG')
+jkt['join'] = jkt['join'].str.replace('CGKRENG', 'CENGKARENG')
+
+
 
 jkt['join'] = jkt['join'].str.replace('ANCOL', 'PADEMANGAN')
 jkt['join'] = jkt['join'].str.replace('BANGKA', 'MAMPANG PRAPATAN')
