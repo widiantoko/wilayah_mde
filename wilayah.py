@@ -541,13 +541,14 @@ for kec in df['kec'].to_list():
 
 bulan=jkt['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
 pilihan=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
+data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
-
-pilih_2=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
+bulan_2=jkt['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
+pilih_2=st.radio("Pilih Bulan:", key="visibility", options= bulan_2, label_visibility= "collapsed",horizontal=True)
 data_hasil2= jkt[(jkt['bulan'] == pilih_2)]
 
 
-data_hasil= jkt[(jkt['bulan'] == pilihan)]
+
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
 new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
