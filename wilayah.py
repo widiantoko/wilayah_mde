@@ -419,9 +419,6 @@ jkt['join'] = jkt['join'].str.replace('11730', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('11740', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('11750', 'CENGKARENG')
 
-bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
-pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
-data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 with open('data/new_jakarta.geojson') as f:
@@ -435,6 +432,10 @@ df = pd.DataFrame(
 
 for kec in df['kec'].to_list():
   jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
+
+bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
+pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
+data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
@@ -491,20 +492,6 @@ all=data_hasil['konid'].count()
 
 
 
-#text=df3.apply(lambda row: f"{row['Y']}%<br>{row['C']}", axis=1),
-#text=df3.apply(lambda row: f"{row['Y']}%<br>{row['C']}", axis=1),
-
-#hoverinfo="text"
-
-
-#st.dataframe(df_kec)
-#st.dataframe(df3)
-
-
-
-
-
-
 
 
 with col1:
@@ -537,36 +524,7 @@ with col1:
 
 
       
-      #figbatam = px.choropleth_mapbox(df3_batam, geojson=geojson01,
-       #                           locations=df3_batam["distrik"],
-        #             featureidkey="properties.WADMKC",color=df3_batam["konid"],
- #     color_continuous_scale="Viridis_r",
- #                          range_color=(0, 1300),
- #                          mapbox_style="carto-positron",
- #                          zoom=10, center = {"lat": 1.054507, "lon": 104.004120},
- #                          opacity=0.7, height=700,
- #                          hover_name="judul",
- #                          hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
-                                    
-                          
- #                    )#type: ignore 
-      #fig9.update_traces(hovertemplate="<b> {custom_data} Kiriman</b>")
       
- #     figbatam.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
-  #    figbatam.update_layout(
- #   hoverlabel=dict(
- #       bgcolor="white",
- #       font_size=12
- #   )
-#)
-      
-     
-
-      #st.plotly_chart(figbatam, use_container_width=True)
-
-      #st.dataframe(jkt)
-
-
 with col2:
   
   st.header(" ")
