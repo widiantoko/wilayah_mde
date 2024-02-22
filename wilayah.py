@@ -440,9 +440,12 @@ data_hasil= jkt[(jkt['bulan'] == pilihan)]
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
 new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
+new_3=pd.merge(new_1, new_2, on='kec', how='left').reset_index(drop=True)
 
 st.dataframe(new_1)
 st.dataframe(new_2)
+st.dataframe(new_3)
+
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
