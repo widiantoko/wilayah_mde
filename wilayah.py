@@ -148,6 +148,8 @@ jkt['join'] = jkt['join'].str.replace('ROA MALAKA', 'TAMBORA')
 
 jkt['join'] = jkt['join'].str.replace('HALIM PERDANA KUSUMA', 'MAKASAR')
 jkt['join'] = jkt['join'].str.replace('HALIM PERDANAKUSUMA', 'MAKASAR')
+jkt['join'] = jkt['join'].str.replace('MAKASSAR', 'MAKASAR')
+
 
 jkt['join'] = jkt['join'].str.replace('KBYRN', 'KEBAYORAN')
 jkt['join'] = jkt['join'].str.replace('KBY', 'KEBAYORAN')
@@ -351,10 +353,12 @@ jkt['join'] = jkt['join'].str.replace('10710', 'SAWAH BESAR')
 
 jkt['join'] = jkt['join'].str.replace('11210', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('11220', 'TAMBORA')
-
 jkt['join'] = jkt['join'].str.replace('11230', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('11240', 'TAMBORA')
 jkt['join'] = jkt['join'].str.replace('11250', 'TAMBORA')
+jkt['join'] = jkt['join'].str.replace('11260', 'TAMBORA')
+jkt['join'] = jkt['join'].str.replace('11270', 'TAMBORA')
+
 jkt['join'] = jkt['join'].str.replace('11330', 'TAMBORA')
 
 
@@ -400,8 +404,8 @@ jkt['join'] = jkt['join'].str.replace('10550', 'JOHAR BARU')
 jkt['join'] = jkt['join'].str.replace('10560', 'JOHAR BARU')
 
 
-
-
+jkt['join'] = jkt['join'].str.replace('11810', 'KALIDERES')
+jkt['join'] = jkt['join'].str.replace('11820', 'KALIDERES')
 jkt['join'] = jkt['join'].str.replace('11830', 'KALIDERES')
 jkt['join'] = jkt['join'].str.replace('11840', 'KALIDERES')
 jkt['join'] = jkt['join'].str.replace('11850', 'KALIDERES')
