@@ -250,6 +250,7 @@ jkt['join'] = jkt['join'].str.replace('KEL KWITANG', 'SENEN')
 
 jkt['join'] = jkt['join'].str.replace('SETIA BUDI', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('STIABDI', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('STIABUDI', 'SETIABUDI')
 
 jkt['join'] = jkt['join'].str.replace('PULO GADUNG', 'PULOGADUNG')
 jkt['join'] = jkt['join'].str.replace('KEL JATI', 'PULOGADUNG')
@@ -335,6 +336,8 @@ jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 53', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 54', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 55', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 57', 'KEBAYORAN BARU')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 58', 'KEBAYORAN BARU')
+
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 59', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 60', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SCBD', 'KEBAYORAN BARU')
