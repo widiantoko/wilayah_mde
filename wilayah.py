@@ -13,13 +13,10 @@ col1, col2 = st.columns([5,2] ,gap="small")
 #jkt=pd.read_excel("data/baru_UOB.xlsx")
 jkt=pd.read_csv("data/baru.csv")
 
-#jkt["join"]=jkt["alam4"].astype(str) +" "+jkt["alam5"].astype(str) +" "+jkt["alam6"].astype(str)
-jkt["join"] = jkt[['alam4', 'alam5', 'alam6']].astype(str)
+jkt["join"]=jkt["alam4"].astype(str) +" "+jkt["alam5"].astype(str) +" "+jkt["alam6"].astype(str)
+#jkt["join"] = jkt[['alam4', 'alam5', 'alam6']].astype(str)
 
-#df["Period"] = df[["Courses", "Duration"]].apply("-".join, axis=1)
 
-#concatenatedString = " ".join (["Programming", "is", "fun."])
-#jkt["join"]=" ".join(["alam4", "alam5", "alam6"])
 jkt['pod'].fillna("empty",inplace=True)
 
 jkt['join'] = jkt['join'].str.replace('  ', ' ')
@@ -454,7 +451,7 @@ pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "colla
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
-new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
+new = data_hasil[data_hasil['pod'].isin(['C','Y','empty'])]
 
 
 new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
@@ -466,7 +463,7 @@ new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
 
 df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
-#st.dataframe(new_2)
+st.dataframe(new)
 #st.dataframe(df3)
 
 
