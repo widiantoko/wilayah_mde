@@ -555,20 +555,10 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
-kec_pilih=jkt[(jkt['join'].str.contains("SUDIRMAN",  na = False, case=False)) & (jkt['kec'].isnull())]
+#kec_pilih=jkt[(jkt['join'].str.contains("SUDIRMAN",  na = False, case=False)) & (jkt['kec'].isnull())]
 #kec_pilih=data_hasil[(data_hasil['kec'].isnull())]
 
-st.dataframe(kec_pilih)
-
-#p_table_hsl = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
-#p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
-
-
-#df2 = jkt.groupby(['kec'], as_index=False)['konid'].count()
-#df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
-#df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
-
-
+#st.dataframe(kec_pilih)
 #st.dataframe(kec_pilih)
 
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
@@ -588,8 +578,6 @@ pod_empty=df3["empty"].sum()
 
 na=data_hasil['kec'].isna().sum()
 all=data_hasil['konid'].count()
-
-
 
 
 
@@ -617,7 +605,6 @@ with col1:
     )
 )
       
-    
       st.subheader("Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan")
       st.plotly_chart(fig9, use_container_width=True)
 
