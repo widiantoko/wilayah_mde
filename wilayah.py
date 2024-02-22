@@ -438,7 +438,11 @@ pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "colla
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
-st.dataframe(new)
+new_1= data_hasil.groupby(['kec', 'pod'], as_index=False)['konid'].count()
+new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
+
+st.dataframe(new_1)
+st.dataframe(new_2)
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
@@ -451,7 +455,7 @@ st.dataframe(new)
 #st.dataframe(data_hasil)
 
 
-p_table_hsl = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+#p_table_hsl = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
 
@@ -460,7 +464,7 @@ df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
 df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
 
 st.dataframe(df3)
-st.dataframe(p_table_hsl)
+#st.dataframe(p_table_hsl)
 
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
 df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
