@@ -453,7 +453,7 @@ data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
-new_AA = data_hasil[data_hasil['pod'].isin(['C','Y',' '])]
+new_AA = data_hasil[data_hasil['pod'].isin(['C','Y',''])]
 
 new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 new_1AA= p_table = pd.pivot_table(new_AA, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
