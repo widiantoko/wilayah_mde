@@ -446,7 +446,7 @@ df = pd.DataFrame(
 for kec in df['kec'].to_list():
   jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
-bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True).reset_index()
+bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
 pilihan=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
@@ -470,7 +470,7 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 
 
-st.dataframe(bulan)
+st.list(bulan)
 
 
 #p_table_hsl = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
