@@ -470,7 +470,7 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
 #kec_pilih=jkt[(jkt['join'].str.contains("PANJAITAN",  na = False, case=False)) & (jkt['kec'].isnull())]
-kec_pilih=jkt[(jkt['kec'].isnull())]
+#kec_pilih=jkt[(jkt['kec'].isnull())]
 
 
 
