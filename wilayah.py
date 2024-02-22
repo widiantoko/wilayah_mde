@@ -415,6 +415,8 @@ jkt['join'] = jkt['join'].str.replace('10160', 'GAMBIR')
 jkt['join'] = jkt['join'].str.replace('10220', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('10230', 'TANAH ABANG')
 
+jkt['join'] = jkt['join'].str.replace('10310', 'MENTENG')
+jkt['join'] = jkt['join'].str.replace('10320', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('10330', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('10340', 'MENTENG')
 jkt['join'] = jkt['join'].str.replace('10350', 'MENTENG')
