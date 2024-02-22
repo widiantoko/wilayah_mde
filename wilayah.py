@@ -473,7 +473,7 @@ kec_pilih=jkt[(jkt['kec'].isnull())]
 #df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
 #df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
 
-#st.dataframe(df3)
+#
 st.dataframe(kec_pilih)
 
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
