@@ -446,7 +446,7 @@ df = pd.DataFrame(
 for kec in df['kec'].to_list():
   jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
-bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
+bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True).reset_index()
 pilihan=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
