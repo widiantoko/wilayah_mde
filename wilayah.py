@@ -604,7 +604,6 @@ with col1:
         font_size=12
     )
 )
-      
       st.subheader("Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan")
       st.plotly_chart(fig9, use_container_width=True)
 
