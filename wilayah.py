@@ -46,6 +46,9 @@ jkt['join'] = jkt['join'].str.replace('MALL OF INDONESIA', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('MOI', 'KELAPA GADING')
 jkt['join'] = jkt['join'].str.replace('PLAZA SUMMARECON', 'PULOGADUNG')
 
+jkt['join'] = jkt['join'].str.replace('PONDOK INDAH OFFICE TOWER', 'KEBAYORAN LAMA')
+jkt['join'] = jkt['join'].str.replace('PD INDAH OFFICE TOWER', 'KEBAYORAN LAMA')
+
 
 jkt['join'] = jkt['join'].str.replace('DUTA MERLIN', 'GAMBIR')
 
