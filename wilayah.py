@@ -328,6 +328,8 @@ jkt['join'] = jkt['join'].str.replace('SUDIRMAN BLK KAV45', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 45', 'TANAH ABANG')
 
 jkt['join'] = jkt['join'].str.replace('SAHID', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV52', 'KEBAYORAN BARU')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV59', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 52', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 53', 'KEBAYORAN BARU')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 54', 'KEBAYORAN BARU')
@@ -526,8 +528,8 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
-#kec_pilih=jkt[(jkt['join'].str.contains("PANJAITAN",  na = False, case=False)) & (jkt['kec'].isnull())]
-kec_pilih=data_hasil[(data_hasil['kec'].isnull())]
+kec_pilih=jkt[(jkt['join'].str.contains("SUDIRMAN",  na = False, case=False)) & (jkt['kec'].isnull())]
+#kec_pilih=data_hasil[(data_hasil['kec'].isnull())]
 
 st.dataframe(kec_pilih)
 
