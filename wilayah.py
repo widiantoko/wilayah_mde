@@ -543,11 +543,6 @@ bulan=jkt['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending
 pilihan=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
-bulan_2=jkt['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
-pilih_2=st.radio("Pilih Bulan:", key="visibility", options= bulan_2, label_visibility= "collapsed",horizontal=True)
-data_hasil2= jkt[(jkt['bulan'] == pilih_2)]
-
-
 
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
