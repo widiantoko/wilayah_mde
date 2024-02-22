@@ -447,7 +447,7 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 #st.dataframe(new_1)
 #st.dataframe(new_2)
-#st.dataframe(df3)
+st.dataframe(df3)
 
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
