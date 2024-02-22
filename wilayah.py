@@ -419,6 +419,9 @@ jkt['join'] = jkt['join'].str.replace('11730', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('11740', 'CENGKARENG')
 jkt['join'] = jkt['join'].str.replace('11750', 'CENGKARENG')
 
+bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
+pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
+data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 with open('data/new_jakarta.geojson') as f:
@@ -433,9 +436,6 @@ df = pd.DataFrame(
 for kec in df['kec'].to_list():
   jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
-bulan=jkt['bulan'].drop_duplicates().sort_index(ascending=True)
-pilihan=st.radio(" ", key="visibility", options= bulan, label_visibility= "collapsed",horizontal=True)
-data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
 new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
