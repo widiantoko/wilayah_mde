@@ -547,7 +547,7 @@ with col2:
   
   st.header(" ")
   st.header(" ")
-  st.text(f"Total Kiriman UOB Jakarta: {all} Dokumen")
+  st.text(f"Jumlah Kiriman UOB bulan {pilihan} : {all} Dokumen")
   st.markdown(f"**{n}** / **{na}**")
   st.markdown(f"**{pod_Y}** / **{pod_C}** / **{pod_empty}**")
  
