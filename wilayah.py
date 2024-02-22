@@ -463,7 +463,7 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 #kec_pilih=jkt[(jkt['join'].str.contains("PANJAITAN",  na = False, case=False)) & (jkt['kec'].isnull())]
 kec_pilih=data_hasil[(data_hasil['kec'].isnull())]
 
-st.text(kec_pilih)
+st.dataframe(kec_pilih)
 
 #p_table_hsl = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 #p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
