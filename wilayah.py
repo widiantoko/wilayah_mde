@@ -442,11 +442,11 @@ new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='k
 new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
 new_3=pd.merge(new_2, new_1, on='kec', how='left').reset_index(drop=True)
 new_3['empty']=new_3['konid']-new_3['Y']-new_3['C']
-new_4=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
+df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 #st.dataframe(new_1)
 #st.dataframe(new_2)
-st.dataframe(new_4)
+st.dataframe(df3)
 
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
@@ -461,14 +461,14 @@ st.dataframe(new_4)
 
 
 #p_table_hsl = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
-p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+#p_table = pd.pivot_table(jkt, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 
 
-df2 = jkt.groupby(['kec'], as_index=False)['konid'].count()
-df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
-df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
+#df2 = jkt.groupby(['kec'], as_index=False)['konid'].count()
+#df2a= jkt.groupby(['kec', 'pod'], as_index=False)['konid'].count()
+#df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
 
-st.dataframe(df3)
+#st.dataframe(df3)
 #st.dataframe(p_table_hsl)
 
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
