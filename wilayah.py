@@ -73,6 +73,8 @@ jkt['join'] = jkt['join'].str.replace('CITY LOFTS SUDIRMAN', 'TANAH ABANG')
 
 jkt['join'] = jkt['join'].str.replace('CHASE PLAZA', 'SETIABUDI')
 jkt['join'] = jkt['join'].str.replace('MENARA BATAVIA', 'SETIABUDI')
+jkt['join'] = jkt['join'].str.replace('WISMA TAMARA', 'SETIABUDI')
+
 jkt['join'] = jkt['join'].str.replace('MANGGALA WANABAKTI', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('DIPO TOWER', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('BATAVIA TOWER', 'TANAH ABANG')
@@ -329,6 +331,8 @@ jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 33', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMANKAV 33', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 34', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 44', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV44', 'TANAH ABANG')
+jkt['join'] = jkt['join'].str.replace('SUDIRMANKAV 44', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN BLK KAV45', 'TANAH ABANG')
 jkt['join'] = jkt['join'].str.replace('SUDIRMAN KAV 45', 'TANAH ABANG')
 
