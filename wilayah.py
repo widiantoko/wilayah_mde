@@ -453,7 +453,7 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
 #kec_pilih=jkt[(jkt['join'].str.contains("PANJAITAN",  na = False, case=False)) & (jkt['kec'].isnull())]
-#kec_pilih=jkt[(jkt['kec'].isnull())]
+kec_pilih=jkt[(jkt['kec'].isnull())]
 
 
 
@@ -470,7 +470,7 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 #df3 = pd.merge(pd.merge(df, df2, on='kec', how='left'), p_table, on='kec', how='left').reset_index(drop=True)
 
 #st.dataframe(df3)
-#st.dataframe(p_table_hsl)
+st.dataframe(kec_pilih)
 
 df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
 df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
