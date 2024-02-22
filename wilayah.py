@@ -457,9 +457,10 @@ new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
 
 df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
-st.dataframe(bulan)
+#st.dataframe(bulan)
 #st.dataframe(df3)
-
+#col_one_list = bulan.tolist()
+st.text(bulan)
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
