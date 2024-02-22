@@ -215,6 +215,7 @@ jkt['join'] = jkt['join'].str.replace('MANGGA BESAR', 'TAMAN SARI')
 jkt['join'] = jkt['join'].str.replace('PONDOK KELAPA', 'DUREN SAWIT')
 jkt['join'] = jkt['join'].str.replace('PONDOK BAMBU', 'DUREN SAWIT')
 jkt['join'] = jkt['join'].str.replace('PONDOK KOPI', 'DUREN SAWIT')
+jkt['join'] = jkt['join'].str.replace('DURENSAWIT', 'DUREN SAWIT')
 
 jkt['join'] = jkt['join'].str.replace('PEGADUNGAN', 'KALIDERES')
 jkt['join'] = jkt['join'].str.replace('SEMANAN', 'KALIDERES')
@@ -410,6 +411,11 @@ jkt['join'] = jkt['join'].str.replace('11330', 'TAMBORA')
 
 jkt['join'] = jkt['join'].str.replace('13230', 'PULOGADUNG')
 jkt['join'] = jkt['join'].str.replace('13220', 'PULOGADUNG')
+
+jkt['join'] = jkt['join'].str.replace('13420', 'JATINEGARA')
+
+jkt['join'] = jkt['join'].str.replace('13430', 'DUREN SAWIT')
+jkt['join'] = jkt['join'].str.replace('13450', 'DUREN SAWIT')
 
 jkt['join'] = jkt['join'].str.replace('10750', 'SAWAH BESAR')
 jkt['join'] = jkt['join'].str.replace('10730', 'SAWAH BESAR')
