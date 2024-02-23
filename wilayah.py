@@ -8,7 +8,7 @@ import json
 st.set_page_config(page_title="Kiriman Jakarta", layout='wide')
 
 #st.subheader("Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan")
-st.markdown("<h2 style='text-align: center; color: dark_blue;'>Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan</h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: darkblue;'>Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan</h2>", unsafe_allow_html=True)
 
 col1, col2 = st.columns([2,2] ,gap="small")
 
@@ -80,7 +80,7 @@ with col1:
                                   color=df3["konid"],color_continuous_scale="Viridis_r",
                            range_color=(0, 1300),
                            mapbox_style="carto-positron",
-                           zoom=10, center = {"lat": -6.3029, "lon": 106.778419},
+                           zoom=10, center = {"lat": -6.2029, "lon": 106.778419},
                            #zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.7, height=500,
                            hover_name="judul",
