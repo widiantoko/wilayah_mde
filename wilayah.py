@@ -26,7 +26,7 @@ for kec in df['kec'].to_list():
   jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
 bulan=jkt['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
-pilihan=st.radio("A", key="A1", options= bulan, key=1, label_visibility= "collapsed",horizontal=True)
+pilihan=st.radio("A", key=1, options= bulan, key=1, label_visibility= "collapsed",horizontal=True)
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
@@ -44,7 +44,7 @@ for kec in df_A['kec'].to_list():
   jkt_A.loc[ jkt_A['join'].str.contains(kec), 'kec'] = kec
 
 bulan_A=jkt_A['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
-pilihan_A=st.radio("B", key="B1", options= bulan_A, label_visibility= "collapsed",horizontal=True)
+pilihan_A=st.radio("B", key=2, options= bulan_A, label_visibility= "collapsed",horizontal=True)
 data_hasil_A= jkt_A[(jkt_A['bulan'] == pilihan_A)]
 
 
