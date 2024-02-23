@@ -79,7 +79,7 @@ with col1:
                                   color=df3["konid"],color_continuous_scale="Viridis_r",
                            range_color=(0, 1300),
                            mapbox_style="carto-positron",
-                           zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
+                           zoom=9, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.7, height=500,
                            hover_name="judul",
                            hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
@@ -97,9 +97,7 @@ with col1:
 )
 
       st.plotly_chart(fig9, use_container_width=True)
-
-      st.header(" ")
-      st.header(" ")
+  
       st.text(f"Jumlah Kiriman UOB {pilihan} : {all} Dokumen")
       st.markdown(f"**{n}** / **{na}**")
       st.markdown(f"**{pod_Y}** / **{pod_C}** / **{pod_empty}**")
