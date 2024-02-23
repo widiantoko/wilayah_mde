@@ -100,7 +100,7 @@ with col1:
 
       st.plotly_chart(fig9, use_container_width=True)
   
-      st.markdown(f"Jumlah Kiriman UOB {pilihan} : *{all}* Dokumen")
+      st.markdown(f"Jumlah Kiriman UOB {pilihan} : **{all}** Dokumen")
       st.markdown(f"**{n}** / **{na}**")
       st.markdown(f"**{pod_Y}** / **{pod_C}** / **{pod_empty}**")
 
