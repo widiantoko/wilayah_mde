@@ -36,18 +36,6 @@ with open('data/new_jakarta.geojson') as g:
       geojson = json.load(g)
 
 
-df_A = pd.DataFrame(
-    {"distrik": pd.json_normalize(geojson["features"])["properties.WADMKC"]}
-).assign(kec=lambda d: d["distrik"].str.upper())
-
-
-
-for kec in df_A['kec'].to_list():
-  jkt_A.loc[ jkt_A['join'].str.contains(kec), 'kec'] = kec
-
-bulan_A=jkt_A['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
-pilihan_A=st.radio("B", key=2, options= bulan_A, label_visibility= "collapsed",horizontal=True)
-data_hasil_A= jkt_A[(jkt_A['bulan'] == pilihan_A)]
 
 
 
@@ -62,13 +50,6 @@ new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
 df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 
-new_A = data_hasil_A[data_hasil_A['pod'].isin(['C','Y'])]
-new_1A= p_table = pd.pivot_table(new_A, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
-new_2A=data_hasil_A.groupby(['kec'], as_index=False)['konid'].count()
-new_3A=pd.merge(new_2A, new_1A, on='kec', how='left').reset_index(drop=True)
-new_3A["empty"]=new_3A["konid"]-new_3A["Y"]-new_3A["C"]
-
-df4=pd.merge(df_A, new_3A, on='kec', how='left').reset_index(drop=True)
 
 
 
@@ -151,7 +132,28 @@ with col1:
 
       
       
-#with col2:
+with col2:
+     
+     df_A = pd.DataFrame(
+    {"distrik": pd.json_normalize(geojson["features"])["properties.WADMKC"]}
+).assign(kec=lambda d: d["distrik"].str.upper())
+
+
+
+for kec in df_A['kec'].to_list():
+  jkt_A.loc[ jkt_A['join'].str.contains(kec), 'kec'] = kec
+
+bulan_A=jkt_A['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
+pilihan_A=st.radio("B", key=2, options= bulan_A, label_visibility= "collapsed",horizontal=True)
+data_hasil_A= jkt_A[(jkt_A['bulan'] == pilihan_A)]
+
   
       
      
+new_A = data_hasil_A[data_hasil_A['pod'].isin(['C','Y'])]
+new_1A= p_table = pd.pivot_table(new_A, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+new_2A=data_hasil_A.groupby(['kec'], as_index=False)['konid'].count()
+new_3A=pd.merge(new_2A, new_1A, on='kec', how='left').reset_index(drop=True)
+new_3A["empty"]=new_3A["konid"]-new_3A["Y"]-new_3A["C"]
+
+df4=pd.merge(df_A, new_3A, on='kec', how='left').reset_index(drop=True)
