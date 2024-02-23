@@ -139,3 +139,52 @@ with col2:
       new_3A["empty"]=new_3A["konid"]-new_3A["Y"]-new_3A["C"]
 
       df4=pd.merge(df_A, new_3A, on='kec', how='left').reset_index(drop=True)
+
+      df4["sukses"]=round(df4["Y"] / df4["konid"] * 100,2)
+      df4["failed"]=round(df4["C"] / df4["konid"] * 100,2)
+      df4["no_status"]=round(df4["empty"] / df4["konid"] * 100,2)
+      df4["judul"]=df4["distrik"].astype(str)+ " : " + df4["konid"].astype(str) + " Dokumen"
+      df4["Sukses"]= df4["Y"].astype(str)+ " ("+ df4["sukses"].astype(str)+" %)"
+      df4["Gagal"]= df4["C"].astype(str)+ " ("+ df4["failed"].astype(str)+" %)"
+      df4["No Status"]= df4["empty"].astype(str)+ " ("+ df4["no_status"].astype(str)+" %)"
+
+
+      n4=df4["konid"].sum()
+      pod_Y4=df4["Y"].sum()
+      pod_C4=df4["C"].sum()
+      pod_empty4=df4["empty"].sum()
+
+
+      na4=data_hasil_A['kec'].isna().sum()
+      all4=data_hasil_A['konid'].count()
+
+
+      fig4 = px.choropleth_mapbox(df4, geojson=geojson,
+                                  locations=df4["distrik"],featureidkey="properties.WADMKC",
+                                  color=df4["konid"],color_continuous_scale="Viridis_r",
+                           range_color=(0, 1300),
+                           mapbox_style="carto-positron",
+                           zoom=10, center = {"lat": -6.2029, "lon": 106.8784},
+                           #zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
+                           opacity=0.7, height=500,
+                           hover_name="judul",
+                           hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
+                                    
+                          
+                     )#type: ignore 
+      #fig9.update_traces(hovertemplate = "%{judul}")
+      
+      fig4.update_layout(margin={"r":0,"t":0,"l":0,"b":0})
+      fig4.update_layout(
+    hoverlabel=dict(
+        bgcolor="white",
+        font_size=12
+    )
+)
+
+      st.plotly_chart(fig4, use_container_width=True)
+  
+      st.text(f"Jumlah Kiriman UOB {pilihan_A} : {all4} Dokumen")
+      st.markdown(f"**{n4}** / **{4}**")
+      st.markdown(f"**{pod_Y4}** / **{pod_C4}** / **{pod_empty4}**")
+
