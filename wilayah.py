@@ -7,7 +7,8 @@ import json
 
 st.set_page_config(page_title="Kiriman Jakarta", layout='wide')
 
-st.subheader("Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan")
+#st.subheader("Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan")
+st.markdown("<h2 style='text-align: center; color: blue;'>Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan</h2>", unsafe_allow_html=True)
 
 col1, col2 = st.columns([2,2] ,gap="small")
 
