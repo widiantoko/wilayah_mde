@@ -7,7 +7,9 @@ import json
 
 st.set_page_config(page_title="Kiriman Jakarta", layout='wide')
 
-col1, col2 = st.columns([5,2] ,gap="small")
+st.subheader("Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan")
+
+col1, col2 = st.columns([2,2] ,gap="small")
 
 
 jkt=pd.read_csv("data/file_new.csv")
@@ -112,19 +114,20 @@ with col1:
         font_size=12
     )
 )
-      st.subheader("Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan")
+
       st.plotly_chart(fig9, use_container_width=True)
 
-
-      
-      
-with col2:
-  
       st.header(" ")
       st.header(" ")
       st.text(f"Jumlah Kiriman UOB {pilihan} : {all} Dokumen")
       st.markdown(f"**{n}** / **{na}**")
       st.markdown(f"**{pod_Y}** / **{pod_C}** / **{pod_empty}**")
 
+
+
+      
+      
+#with col2:
+  
+      
      
- 
