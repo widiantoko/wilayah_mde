@@ -13,7 +13,7 @@ col1, col2 = st.columns([2,2] ,gap="small")
 
 
 jkt=pd.read_csv("data/file_new.csv")
-jkt_A=pd.read_csv("data/file_new.csv")
+
 
 with open('data/new_jakarta.geojson') as f:
       geojson = json.load(f)
@@ -32,8 +32,6 @@ pilihan=st.radio("A", key=1, options= bulan, label_visibility= "collapsed",horiz
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
-with open('data/new_jakarta.geojson') as g:
-      geojson = json.load(g)
 
 
 
@@ -85,17 +83,6 @@ all=data_hasil['konid'].count()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 with col1:
 
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
@@ -133,8 +120,14 @@ with col1:
       
       
 with col2:
+
+      jkt_A=pd.read_csv("data/file_new.csv")
+
+      with open('data/new_jakarta.geojson') as g:
+            geojson = json.load(g)
+
      
-     df_A = pd.DataFrame(
+      df_A = pd.DataFrame(
     {"distrik": pd.json_normalize(geojson["features"])["properties.WADMKC"]}
 ).assign(kec=lambda d: d["distrik"].str.upper())
 
