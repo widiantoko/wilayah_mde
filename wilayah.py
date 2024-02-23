@@ -12,40 +12,36 @@ st.subheader("Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan")
 col1, col2 = st.columns([2,2] ,gap="small")
 
 
-jkt=pd.read_csv("data/file_new.csv")
+
+with col1:
+      jkt=pd.read_csv("data/file_new.csv")
 
 
-with open('data/new_jakarta.geojson') as f:
-      geojson = json.load(f)
+      with open('data/new_jakarta.geojson') as f:
+            geojson = json.load(f)
 
 
-df = pd.DataFrame(
+      df = pd.DataFrame(
     {"distrik": pd.json_normalize(geojson["features"])["properties.WADMKC"]}
 ).assign(kec=lambda d: d["distrik"].str.upper())
 
 
-for kec in df['kec'].to_list():
-  jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
+      for kec in df['kec'].to_list():
+            jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
-bulan=jkt['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
-pilihan=st.radio("A", key=1, options= bulan, label_visibility= "collapsed",horizontal=True)
-data_hasil= jkt[(jkt['bulan'] == pilihan)]
-
-
+      bulan=jkt['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
+      pilihan=st.radio("A", key=1, options= bulan, label_visibility= "collapsed",horizontal=True)
+      data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 
+      new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
+      new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+      new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
+      new_3=pd.merge(new_2, new_1, on='kec', how='left').reset_index(drop=True)
+      new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
 
-
-
-
-new = data_hasil[data_hasil['pod'].isin(['C','Y'])]
-new_1= p_table = pd.pivot_table(new, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
-new_2=data_hasil.groupby(['kec'], as_index=False)['konid'].count()
-new_3=pd.merge(new_2, new_1, on='kec', how='left').reset_index(drop=True)
-new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
-
-df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
+      df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 
 
@@ -59,31 +55,24 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 #st.dataframe(kec_pilih)
 #st.dataframe(kec_pilih)
 
-df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
-df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
-df3["no_status"]=round(df3["empty"] / df3["konid"] * 100,2)
-df3["judul"]=df3["distrik"].astype(str)+ " : " + df3["konid"].astype(str) + " Dokumen"
-df3["Sukses"]= df3["Y"].astype(str)+ " ("+ df3["sukses"].astype(str)+" %)"
-df3["Gagal"]= df3["C"].astype(str)+ " ("+ df3["failed"].astype(str)+" %)"
-df3["No Status"]= df3["empty"].astype(str)+ " ("+ df3["no_status"].astype(str)+" %)"
+      df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
+      df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
+      df3["no_status"]=round(df3["empty"] / df3["konid"] * 100,2)
+      df3["judul"]=df3["distrik"].astype(str)+ " : " + df3["konid"].astype(str) + " Dokumen"
+      df3["Sukses"]= df3["Y"].astype(str)+ " ("+ df3["sukses"].astype(str)+" %)"
+      df3["Gagal"]= df3["C"].astype(str)+ " ("+ df3["failed"].astype(str)+" %)"
+      df3["No Status"]= df3["empty"].astype(str)+ " ("+ df3["no_status"].astype(str)+" %)"
 
 
-n=df3["konid"].sum()
-pod_Y=df3["Y"].sum()
-pod_C=df3["C"].sum()
-pod_empty=df3["empty"].sum()
+      n=df3["konid"].sum()
+      pod_Y=df3["Y"].sum()
+      pod_C=df3["C"].sum()
+      pod_empty=df3["empty"].sum()
 
 
-na=data_hasil['kec'].isna().sum()
-all=data_hasil['konid'].count()
+      na=data_hasil['kec'].isna().sum()
+      all=data_hasil['konid'].count()
 
-
-
-
-
-
-
-with col1:
 
       fig9 = px.choropleth_mapbox(df3, geojson=geojson,
                                   locations=df3["distrik"],featureidkey="properties.WADMKC",
@@ -133,20 +122,20 @@ with col2:
 
 
 
-for kec in df_A['kec'].to_list():
-  jkt_A.loc[ jkt_A['join'].str.contains(kec), 'kec'] = kec
+      for kec in df_A['kec'].to_list():
+            jkt_A.loc[ jkt_A['join'].str.contains(kec), 'kec'] = kec
 
-bulan_A=jkt_A['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
-pilihan_A=st.radio("B", key=2, options= bulan_A, label_visibility= "collapsed",horizontal=True)
-data_hasil_A= jkt_A[(jkt_A['bulan'] == pilihan_A)]
+      bulan_A=jkt_A['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
+      pilihan_A=st.radio("B", key=2, options= bulan_A, label_visibility= "collapsed",horizontal=True)
+      data_hasil_A= jkt_A[(jkt_A['bulan'] == pilihan_A)]
 
   
       
      
-new_A = data_hasil_A[data_hasil_A['pod'].isin(['C','Y'])]
-new_1A= p_table = pd.pivot_table(new_A, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
-new_2A=data_hasil_A.groupby(['kec'], as_index=False)['konid'].count()
-new_3A=pd.merge(new_2A, new_1A, on='kec', how='left').reset_index(drop=True)
-new_3A["empty"]=new_3A["konid"]-new_3A["Y"]-new_3A["C"]
+      new_A = data_hasil_A[data_hasil_A['pod'].isin(['C','Y'])]
+      new_1A= p_table = pd.pivot_table(new_A, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+      new_2A=data_hasil_A.groupby(['kec'], as_index=False)['konid'].count()
+      new_3A=pd.merge(new_2A, new_1A, on='kec', how='left').reset_index(drop=True)
+      new_3A["empty"]=new_3A["konid"]-new_3A["Y"]-new_3A["C"]
 
-df4=pd.merge(df_A, new_3A, on='kec', how='left').reset_index(drop=True)
+      df4=pd.merge(df_A, new_3A, on='kec', how='left').reset_index(drop=True)
