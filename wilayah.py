@@ -31,7 +31,7 @@ data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
 with open('data/new_jakarta.geojson') as g:
-      geojson = json.load(f)
+      geojson = json.load(g)
 
 
 df_A = pd.DataFrame(
