@@ -80,7 +80,7 @@ with col1:
                                   color=df3["konid"],color_continuous_scale="Viridis_r",
                            range_color=(0, 1300),
                            mapbox_style="carto-positron",
-                           zoom=10, center = {"lat": -6.202912, "lon": 106.778419},
+                           zoom=10, center = {"lat": -6.202972, "lon": 106.778419},
                            #zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
                            opacity=0.7, height=500,
                            hover_name="judul",
