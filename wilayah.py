@@ -62,6 +62,15 @@ new_3["empty"]=new_3["konid"]-new_3["Y"]-new_3["C"]
 df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 
+new_A = data_hasil_A[data_hasil_A['pod'].isin(['C','Y'])]
+new_1A= p_table = pd.pivot_table(newA, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+new_2A=data_hasil_A.groupby(['kec'], as_index=False)['konid'].count()
+new_3A=pd.merge(new_2A, new_1A, on='kec', how='left').reset_index(drop=True)
+new_3A["empty"]=new_3A["konid"]-new_3A["Y"]-new_3A["C"]
+
+df4=pd.merge(df_A, new_3A, on='kec', how='left').reset_index(drop=True)
+
+
 
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
@@ -88,6 +97,21 @@ pod_empty=df3["empty"].sum()
 
 na=data_hasil['kec'].isna().sum()
 all=data_hasil['konid'].count()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
