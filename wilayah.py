@@ -40,10 +40,8 @@ df_A = pd.DataFrame(
 
 
 
-
-
 for kec in df_A['kec'].to_list():
-  jkt_A.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
+  jkt_A.loc[ jkt_A['join'].str.contains(kec), 'kec'] = kec
 
 bulan_A=jkt_A['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
 pilihan_A=st.radio("Pilih Bulan:", key="visibility", options= bulan_A, label_visibility= "collapsed",horizontal=True)
