@@ -63,7 +63,7 @@ df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
 
 new_A = data_hasil_A[data_hasil_A['pod'].isin(['C','Y'])]
-new_1A= p_table = pd.pivot_table(newA, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
+new_1A= p_table = pd.pivot_table(new_A, index= ['kec'],  columns=['pod'], values='konid', aggfunc = 'count' ).fillna(0).reset_index()
 new_2A=data_hasil_A.groupby(['kec'], as_index=False)['konid'].count()
 new_3A=pd.merge(new_2A, new_1A, on='kec', how='left').reset_index(drop=True)
 new_3A["empty"]=new_3A["konid"]-new_3A["Y"]-new_3A["C"]
@@ -123,7 +123,7 @@ with col1:
                            range_color=(0, 1300),
                            mapbox_style="carto-positron",
                            zoom=10, center = {"lat": -6.202905, "lon": 106.778419},
-                           opacity=0.7, height=600,
+                           opacity=0.7, height=500,
                            hover_name="judul",
                            hover_data = {'konid':False, 'distrik':False, "Sukses": True, "Gagal":True, "No Status":True}
                                     
