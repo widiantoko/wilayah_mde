@@ -30,7 +30,19 @@ pilihan=st.radio("Pilih Bulan:", key="visibility", options= bulan, label_visibil
 data_hasil= jkt[(jkt['bulan'] == pilihan)]
 
 
-for kec in df['kec'].to_list():
+with open('data/new_jakarta.geojson') as g:
+      geojson = json.load(f)
+
+
+df_A = pd.DataFrame(
+    {"distrik": pd.json_normalize(geojson["features"])["properties.WADMKC"]}
+).assign(kec=lambda d: d["distrik"].str.upper())
+
+
+
+
+
+for kec in df_A['kec'].to_list():
   jkt_A.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
 bulan_A=jkt_A['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
