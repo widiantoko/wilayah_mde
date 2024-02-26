@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import json
 
 
-st.set_page_config(page_title="Kiriman Jakarta", layout='wide')
+st.set_page_config(page_title="Sebaran Kiriman Jakarta", layout='wide')
 
 #st.subheader("Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan")
 st.markdown("<h2 style='text-align: center; color: darkblue;'>Sebaran Kiriman Per Kecamatan di Jakarta Per Bulan</h2>", unsafe_allow_html=True)
@@ -51,9 +51,9 @@ with col1:
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
 #kec_pilih=jkt[(jkt['join'].str.contains("SUDIRMAN",  na = False, case=False)) & (jkt['kec'].isnull())]
-#kec_pilih=data_hasil[(data_hasil['kec'].isnull())]
+      kec_pilih=data_hasil[(data_hasil['kec'].isnull())]
 
-#st.dataframe(kec_pilih)
+      st.dataframe(kec_pilih)
 #st.dataframe(kec_pilih)
 
       df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
