@@ -51,7 +51,7 @@ with col1:
 #kec_none=jkt.loc[jkt['kec'].isnull()].sort_values(by=['kab'], ascending=False)
 #kec_pilih=jkt[(jkt['join'].str.contains("GD PELURU",  na = False, case=False)) & (jkt['kec'].isnull())]
 #kec_pilih=jkt[(jkt['join'].str.contains("SUDIRMAN",  na = False, case=False)) & (jkt['kec'].isnull())]
-      kec_pilih=data_hasil[["alam4", "alam5","alam6","join"]][(data_hasil['kec'].isnull())]
+      kec_pilih=data_hasil[["join","kodepos"]][(data_hasil['kec'].isnull())]
 
 
       st.dataframe(kec_pilih)
