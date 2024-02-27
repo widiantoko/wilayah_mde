@@ -30,7 +30,7 @@ with col1:
       for kec in df['kec'].to_list():
             jkt.loc[ jkt['join'].str.contains(kec), 'kec'] = kec
 
-      st.dataframe(df)      
+      st.table(df)      
 
       bulan=jkt['bulan'].drop_duplicates().reset_index(drop=True).sort_index(ascending=True)
       pilihan=st.radio("A", key=1, options= bulan, label_visibility= "collapsed",horizontal=True)
