@@ -23,8 +23,8 @@ with col1:
 
 
       df = pd.DataFrame(
-    {"distrik": pd.json_normalize(geojson["features"])["properties.WADMKC"]}
-).assign(kec=lambda d: d["distrik"].str.upper())
+      {"distrik": pd.json_normalize(geojson["features"])["properties.WADMKC"]}
+      ).assign(kec=lambda d: d["distrik"].str.upper())
 
 
       for kec in df['kec'].to_list():
