@@ -46,7 +46,8 @@ with col1:
 
       df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
-      st.dataframe(new)
+      test=pd.read_csv("data/test_02.csv")
+      st.dataframe(test)
 
 
 
@@ -58,7 +59,7 @@ with col1:
 
 
       #st.dataframe(kec_pilih)
-#st.dataframe(kec_pilih)
+      #st.dataframe(kec_pilih)
 
       df3["sukses"]=round(df3["Y"] / df3["konid"] * 100,2)
       df3["failed"]=round(df3["C"] / df3["konid"] * 100,2)
