@@ -47,7 +47,7 @@ with col1:
       df3=pd.merge(df, new_3, on='kec', how='left').reset_index(drop=True)
 
       test=pd.read_csv("data/test_02.csv")
-      test=test.drop(['unamed:'])
+   
       st.dataframe(test)
 
 
