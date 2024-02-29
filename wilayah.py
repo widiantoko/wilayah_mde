@@ -15,7 +15,7 @@ col1, col2 = st.columns([2,2] ,gap="small")
 
 
 with col1:
-      jkt=pd.read_csv("data/file_new_01.csv")
+      jkt=pd.read_csv("data/file_new.csv")
 
 
       with open('data/new_jakarta.geojson') as f:
