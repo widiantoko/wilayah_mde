@@ -48,7 +48,7 @@ with col1:
 
       test=pd.read_csv("data/test_02.csv")
    
-      st.dataframe(test)
+      #st.dataframe(test)
 
 
 
